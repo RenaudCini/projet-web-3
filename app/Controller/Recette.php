@@ -14,7 +14,6 @@ class Recette extends Controller
     {
         /* $recettes = $this->model->findRecette();*/
         $this->render('listeRecette');
-
     }
 
     /**
