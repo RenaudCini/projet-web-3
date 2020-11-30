@@ -13,7 +13,7 @@ abstract class Controller
         $this->model = new $className;
     }
 
-    protected function render(string $path, array $vars = [])
+    public function render(string $path, array $vars = [])
     {
         extract($vars);
 

@@ -2,9 +2,9 @@
 
 namespace Controller;
 
-require_once 'lib/Controller/Controller.php';
-require_once 'lib/Http.php';
-require_once 'lib/Model/Comment.php';
+require_once 'app/Controller/Controller.php';
+require_once 'app/Http.php';
+require_once 'app/Model/Comment.php';
 
 class Comment extends Controller
 {

@@ -8,7 +8,7 @@ require_once __DIR__ . '/autoload.php';
 $controllerName = filter_input(INPUT_GET, 'controller');
 
 if (!$controllerName) {
-    $controllerName = 'article';
+    $controllerName = 'recette';
 }
 
 $controllerName ='Controller\\' . ucfirst($controllerName);
@@ -22,15 +22,17 @@ if (!$actionNAme)
 }
 
 if (!class_exists($controllerName)) {
-    Http::createErrorResponse('la classe n\'existe pas', 404);
+
+    $controller = new Recette();
+    $controller->render('listeRecette');
 }
 
 
-$controller = new $controllerName;
+$controllerName = new $controllerName;
 
 if(!method_exists($controllerName,$actionNAme))
 {
     Http::createErrorResponse('la classe n\'existe pas', 404);
 
 }
-$controller->$actionNAme();
+$controllerName->$actionNAme();

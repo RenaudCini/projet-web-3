@@ -3,7 +3,6 @@
 namespace Controller;
 
 
-
 class Recette extends Controller
 {
     protected $modelName = 'Recette';
@@ -13,11 +12,9 @@ class Recette extends Controller
      */
     public function index()
     {
-        $recettes = $this->model->findArticles();
+        /* $recettes = $this->model->findRecette();*/
+        $this->render('listeRecette');
 
-        $this->render('recette/list', [
-            'recettes' => $recettes
-        ]);
     }
 
     /**
@@ -34,11 +31,11 @@ class Recette extends Controller
             \Http::createErrorResponse('Il faut préciser un identifiant numérique.');
         }
 
-        $article = $this->model->find($id);
+        /*      $article = $this->model->find($id);
 
-        if (!$article) {
-            \Http:: createErrorResponse('Aucun article trouvé pour l\'identifiant demandé.', 404);
-        }
+              if (!$article) {
+                  \Http:: createErrorResponse('Aucun article trouvé pour l\'identifiant demandé.', 404);
+              }*/
 
         // Si POST, on veut enregistrer un commentaire
         if (\Http::isMethod('POST')) {
@@ -50,20 +47,18 @@ class Recette extends Controller
                 \Http::createErrorResponse('Vous avez mal rempli le formulaire.');
             }
 
-            $commentModel->insertComment($author, $content, $id);
+            /*   $commentModel->insertComment($author, $content, $id);
 
-            \Http::redirect("index.php?article&id=$id");
+              \Http::redirect("index.php?article&id=$id");*/
         }
+        /*
+              // Si on est en GET, c'est qu'on veut l'article
+              $comments = $commentModel->findAllComments);
 
-        // Si on est en GET, c'est qu'on veut l'article
-
-
-        $comments = $commentModel->findAllComments($id);
-
-        $this->render('article/article', [
-            'article' => $article,
-            'comments' => $comments
-        ]);
+            /*  $this->render('article/article', [
+                  'article' => $article,
+                  'comments' => $comments
+              ]);*/
     }
 
     /**
@@ -83,26 +78,24 @@ class Recette extends Controller
 
             $id = $this->model->insertArticle($title, $short, $content, $image);
 
-            \Http::redirect("index.php?show&id=$id");
+            /* \Http::redirect("index.php?show&id=$id");*/
         }
 
-        $this->render('article/create');
+        /*       $this->render('article/create');*/
     }
 
     public function delete()
     {
         $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
-        if(!$id)
-        {
+        if (!$id) {
             \Http::createErrorResponse("Un des champs ne correspond pas.");
         }
 
         $article = $this->model->find($id);
-         if(!$article)
-         {
-             \Http::createErrorResponse("Un des champs ne correspond pas.");
-         }
+        if (!$article) {
+            \Http::createErrorResponse("Un des champs ne correspond pas.");
+        }
         $this->model->delete($id);
-        \Http::redirect("index.php?controlleur=article&action=index");
+        \Http::redirect("index.php?controlleur=recette&action=index");
     }
 }

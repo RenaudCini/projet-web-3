@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="" />
+    <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/listeRecette.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Controller/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Controller/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Recette.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Http.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Model/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Recette.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/header.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.html.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,10 +85,10 @@
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2486" y="-135" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606659060915" />
-    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606659448164">
+    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606739638257">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606659448164" />
+    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606739638257" />
     <state x="2012" y="-43" width="1736" height="896" key="DiffContextDialog" timestamp="1606659987279">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
@@ -91,14 +106,15 @@
     </state>
     <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606660675749" />
     <state x="465" y="258" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598595748313" />
-    <state x="2499" y="70" width="764" height="670" key="find.popup" timestamp="1606660073090">
+    <state x="2499" y="70" width="764" height="670" key="find.popup" timestamp="1606738575705">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2499" y="70" width="764" height="670" key="find.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606660073090" />
+    <state x="2499" y="70" width="764" height="670" key="find.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606738575705" />
     <state x="463" y="164" width="611" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1598597026037" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1598532238545">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="2451" y="111" key="run.anything.popup" timestamp="1606739230973">
+      <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
+    <state x="2451" y="111" key="run.anything.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606739230973" />
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1598532238545" />
   </component>
 </project>
