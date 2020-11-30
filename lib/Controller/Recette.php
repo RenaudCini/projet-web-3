@@ -37,7 +37,7 @@ class Recette extends Controller
         $article = $this->model->find($id);
 
         if (!$article) {
-            \Http:: createErrorResponse('Aucun article trouvé pour l\'identifiant demandé.', 404);
+            \Http::createErrorResponse('Aucun article trouvé pour l\'identifiant demandé.', 404);
         }
 
         // Si POST, on veut enregistrer un commentaire
@@ -92,16 +92,14 @@ class Recette extends Controller
     public function delete()
     {
         $id = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
-        if(!$id)
-        {
+        if (!$id) {
             \Http::createErrorResponse("Un des champs ne correspond pas.");
         }
 
         $article = $this->model->find($id);
-         if(!$article)
-         {
-             \Http::createErrorResponse("Un des champs ne correspond pas.");
-         }
+        if (!$article) {
+            \Http::createErrorResponse("Un des champs ne correspond pas.");
+        }
         $this->model->delete($id);
         \Http::redirect("index.php?controlleur=article&action=index");
     }
