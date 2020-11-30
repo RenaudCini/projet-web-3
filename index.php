@@ -1,14 +1,14 @@
 <?php
 
-use Controller\Recette;
+use Controller\General;
 
 require_once __DIR__ . '/autoload.php';
 
+$requestUri = filter_input(INPUT_SERVER, 'REQUEST_URI');
 
-$controllerName = filter_input(INPUT_GET, 'controller');
-
-if (!$controllerName) {
-    $controllerName = 'recette';
+if ($requestUri === '/') {
+    $controller = new General;
+    $controller->home();
 }
 
 $controllerName ='Controller\\' . ucfirst($controllerName);
@@ -22,17 +22,15 @@ if (!$actionNAme)
 }
 
 if (!class_exists($controllerName)) {
-
-    $controller = new Recette();
-    $controller->render('listeRecette');
+    Http::createErrorResponse('la classe n\'existe pas', 404);
 }
 
 
-$controllerName = new $controllerName;
+$controller = new $controllerName;
 
 if(!method_exists($controllerName,$actionNAme))
 {
     Http::createErrorResponse('la classe n\'existe pas', 404);
 
 }
-$controllerName->$actionNAme();
+$controller->$actionNAme();

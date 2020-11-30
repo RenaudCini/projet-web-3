@@ -3,6 +3,7 @@
 namespace Controller;
 
 
+
 class Recette extends Controller
 {
     protected $modelName = 'Recette';
@@ -12,9 +13,11 @@ class Recette extends Controller
      */
     public function index()
     {
-        /* $recettes = $this->model->findRecette();*/
-        $this->render('listeRecette');
+        $recettes = $this->model->findArticles();
 
+        $this->render('recette/list', [
+            'recettes' => $recettes
+        ]);
     }
 
     /**
