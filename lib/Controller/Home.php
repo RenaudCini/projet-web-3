@@ -2,9 +2,9 @@
 
 namespace Controller;
 
-class General extends Controller
+class Home extends Controller
 {
-    protected $modelName = 'General';
+    protected $modelName = 'Home';
 
     public function home()
     {
