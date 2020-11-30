@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/listeRecette.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/General.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Recettes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/General.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controller/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Controller/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/Recette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Http.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Model/Recette.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Recette.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/header.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,26 +72,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2486" y="-135" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606659060915">
+    <state x="2486" y="-135" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606743318654">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2486" y="-135" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606659060915" />
-    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606739638257">
+    <state x="2486" y="-135" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743318654" />
+    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606744440419">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606739638257" />
+    <state x="2610" y="153" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606744440419" />
     <state x="2012" y="-43" width="1736" height="896" key="DiffContextDialog" timestamp="1606659987279">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2012" y="-43" width="1736" height="896" key="DiffContextDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606659987279" />
+    <state x="2660" y="161" key="FileChooserDialogImpl" timestamp="1606744124361">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2660" y="161" key="FileChooserDialogImpl/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606744124361" />
+    <state x="2258" y="48" key="MergeDialog" timestamp="1606740932894">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2258" y="48" key="MergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740932894" />
+    <state x="2592" y="122" key="MultipleFileMergeDialog" timestamp="1606740932901">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2592" y="122" key="MultipleFileMergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740932901" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606743814996">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743814996" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606659987279">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606659987279" />
-    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606660165278">
+    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606743853507">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606660165278" />
+    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743853507" />
     <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606660675749">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
@@ -111,10 +118,14 @@
     </state>
     <state x="2499" y="70" width="764" height="670" key="find.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606738575705" />
     <state x="463" y="164" width="611" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1598597026037" />
-    <state x="2451" y="111" key="run.anything.popup" timestamp="1606739230973">
+    <state x="2451" y="111" key="run.anything.popup" timestamp="1606740957985">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2451" y="111" key="run.anything.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606739230973" />
+    <state x="2451" y="111" key="run.anything.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740957985" />
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1598532238545" />
+    <state x="2602" y="318" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606744459380">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2602" y="318" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606744459380" />
   </component>
 </project>
