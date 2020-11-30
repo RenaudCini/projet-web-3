@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#">Nos recettes <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="lesrecettesdudeveloppeur.test/create_recette/creation_recette_pg.php">Créer votre recette</a>
+                    <a class="nav-link" href="creation_recette/creation_recette_pg.php">Créer votre recette</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

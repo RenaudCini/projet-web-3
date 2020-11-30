@@ -4,6 +4,7 @@
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
       <workItem from="1598595734742" duration="4828000" />
       <workItem from="1606658178488" duration="287000" />
       <workItem from="1606658684059" duration="1484000" />
+      <workItem from="1606747395114" duration="118000" />
     </task>
     <servers />
   </component>
@@ -86,10 +88,10 @@
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2012" y="-43" width="1736" height="896" key="DiffContextDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606659987279" />
-    <state x="2660" y="161" key="FileChooserDialogImpl" timestamp="1606744124361">
+    <state x="2660" y="161" key="FileChooserDialogImpl" timestamp="1606747392538">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2660" y="161" key="FileChooserDialogImpl/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606744124361" />
+    <state x="2660" y="161" key="FileChooserDialogImpl/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606747392538" />
     <state x="2258" y="48" key="MergeDialog" timestamp="1606740932894">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
