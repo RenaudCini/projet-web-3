@@ -144,3 +144,18 @@ CREATE TABLE commentaires
 
 
 SELECT * FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id ORDER BY r.id DESC limit 3
+
+INSERT INTO mesures (nom) VALUES
+('gramme(s)'),
+('kilogramme(s)'),
+('pincée(s)'),
+('cuillère(s) à café'),
+( 'cuillère(s) à soupe'),
+('litre(s)'),
+('centilitre(s)');
+
+INSERT INTO utilisateurs (id, pseudo, mail, mdp, date_inscription, derniere_connexion, id_roles) VALUES (NULL, 'AdamSky', 'adamsky@mail.com', '123456', '2020-12-01 04:07:10', '', '1');
+
+INSERT INTO recettes (id, titre, difficulte, budget, temps, date, image, id_utilisateurs) VALUES (NULL, 'Sauté de boeuf', '3', '4', '45 min', '2020-12-01 09:12:11', '', '1');
+
+INSERT INTO roles (id, nom) VALUES (NULL, 'Administrateur');

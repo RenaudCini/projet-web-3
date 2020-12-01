@@ -11,10 +11,10 @@ $recettes = $recettes->listeRecettes('LIMIT 3');
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src=" https://picsum.photos/1000/200?random=1" alt="First slide">
+                <img class="d-block w-100" src="https://picsum.photos/1000/200?random=1" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src=" https://picsum.photos/1000/200?random=2" alt="Second slide">
+                <img class="d-block w-100" src="https://picsum.photos/1000/200?random=2" alt="Second slide">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="https://picsum.photos/1000/200?random=3" alt="Third slide">

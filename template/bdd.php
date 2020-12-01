@@ -36,9 +36,9 @@ class BDD
     public function selectTouteDonne(string $sql, string $limit, string $orderby, array $params = [])
     {
 
-        $sql = $sql . ' ' . $orderby . ' ' . $limit;
+        $sql .= ' ' . $orderby . ' ' . $limit;
         $requete = $this->db->prepare($sql);
- 
+
         $requete->execute($params);
 
         return $requete->fetchAll(PDO::FETCH_ASSOC);

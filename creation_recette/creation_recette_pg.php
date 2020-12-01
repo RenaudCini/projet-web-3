@@ -133,13 +133,9 @@
             <div class="offset-md-2 col-md-8">
                 <input type="text" id="image" class="text-center form-control" placeholder="URL de l'image">
             </div>
-
             <br>
-
             <button class="btn btn-success btnEnvoiFormulaire">Valider</button>
-
             <br><br>
-
         </div>
 
     </div>

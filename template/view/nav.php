@@ -21,7 +21,7 @@
                     <a class="nav-link" href="/liste_recettes/liste_recettes_pg.php">Nos recettes <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Créer votre recette</a>
+                    <a class="nav-link" href="/creation_recette/creation_recette_pg.phpç">Créer votre recette</a>
                 </li>
 
             </ul>
