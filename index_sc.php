@@ -9,9 +9,9 @@ function listeRecettes()
 
 
     /**
-     * 2. Récupération des recettes
+     * 2. Récupération des trois dernières recettes
      */
-    $resultats = $pdo->query('SELECT * FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id');
+    $resultats = $pdo->query('SELECT * FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id ORDER BY r.id DESC LIMIT 3');
     /* 
         * $recettes continent toutes les variables dont nous auront besoin 
         */
