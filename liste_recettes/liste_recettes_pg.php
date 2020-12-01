@@ -1,26 +1,23 @@
 <?php
+
+$titrePage = 'Liste des recettes';
+$js[] = 'liste_recettes.js';
+
 require_once '../template/view/nav.php';
 require_once 'liste_recettes_sc.php';
+
 $recettes = new liste_recettes_sc;
 $recettes = $recettes->listeRecettes('');
 $compteur = 0;
 ?>
 
 <body>
-<div class="form-group row justify-content-center">
-    <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
-</div>
-<div class="row justify-content-center">
-    <button class="btn btn-primary" id="buttonSearch">Rechercher</button>
-</div>
-
-<script>
-    let buttonSearch = $("#buttonSearch");
-    buttonSearch.click(function() {
-        let valeur = $("#recherche").val();
-        console.log(valeur);
-    });
-</script>
+    <div class="form-group row justify-content-center">
+        <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
+    </div>
+    <div class="row justify-content-center">
+        <button class="btn btn-primary" id="buttonSearch">Rechercher</button>
+    </div>
 
     <div class="row">
         <?php foreach ($recettes as $recette) {
