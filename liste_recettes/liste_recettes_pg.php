@@ -7,6 +7,21 @@ $compteur = 0;
 ?>
 
 <body>
+<div class="form-group row justify-content-center">
+    <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
+</div>
+<div class="row justify-content-center">
+    <button class="btn btn-primary" id="buttonSearch">Rechercher</button>
+</div>
+
+<script>
+    let buttonSearch = $("#buttonSearch");
+    buttonSearch.click(function() {
+        let valeur = $("#recherche").val();
+        console.log(valeur);
+    });
+</script>
+
     <div class="row">
         <?php foreach ($recettes as $recette) {
             if ($compteur % 3 === 0) :
@@ -28,4 +43,5 @@ $compteur = 0;
 <?php $compteur++;
         } ?>
     </div>
+
     <?php require_once '../template/view/footer.php';
