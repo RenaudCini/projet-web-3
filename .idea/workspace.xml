@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/template/bdd.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_sc.php" afterDir="false" />
     </list>
@@ -26,30 +28,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="mesures: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="Git.Settings">
@@ -92,11 +71,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2002f369" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
             </expand>
             <select />
           </treeState>
@@ -122,7 +96,7 @@
       <workItem from="1606747395114" duration="2058000" />
       <workItem from="1606749500559" duration="4716000" />
       <workItem from="1606809482190" duration="833000" />
-      <workItem from="1606810357608" duration="1832000" />
+      <workItem from="1606810357608" duration="6799000" />
     </task>
     <servers />
   </component>
@@ -183,10 +157,11 @@
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2592" y="122" key="MultipleFileMergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740932901" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1606743814996">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606817683897">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743814996" />
+    <state width="498" height="446" key="SwitcherDM/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606817683897" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606744603472">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
