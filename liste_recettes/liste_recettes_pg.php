@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/asset/lib/bootstrap/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
-</head>
+<?php
+require_once '../template/view/nav.php';
+require_once 'liste_recettes_sc.php';
+$recettes = new liste_recettes_sc;
+$recettes = $recettes->listeRecettes('');
+$compteur = 0;
+?>
 
 <body>
-
-
-    <p>Bootcamp</p>
-
     <div class="form-group row justify-content-center">
         <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
     </div>
@@ -28,13 +21,25 @@
             console.log(valeur);
         });
     </script>
-
-    <footer>
-        <script src="/asset/lib/jquery/jquery.min.js"></script>
-        <script src="/asset/lib/popper/popper.min.js"></script>
-        <script src="/asset/lib/bootstrap/bootstrap.min.js"></script>
-    </footer>
-
-</body>
-
-</html>
+    <div class="row">
+        <?php foreach ($recettes as $recette) {
+            if ($compteur % 3 === 0) :
+        ?> </div>
+    <div class="row">
+    <?php endif ?>
+    <div class="col-md-4 pb-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title"><?= $recette['titre'] ?></h5>
+                <p class="card-text"><?= $recette['difficulte'] ?></p>
+                <p class="text-right small text-secondary"> Ecrit par
+                    <?= $recette['pseudo'] ?> le
+                    <?= $recette['date'] ?>
+                </p>
+            </div>
+        </div>
+    </div>
+<?php $compteur++;
+        } ?>
+    </div>
+    <?php require_once '../template/view/footer.php';
