@@ -1,9 +1,8 @@
 <?php
-require_once '../index_sc.php';
 require_once '../nav.php';
-require_once '../index_sc.php';
-$recettes = new index_sc;
-$recettes = $recettes->listeRecettes('limit 3');
+require_once 'liste_recettes_sc.php';
+$recettes = new liste_recettes_sc;
+$recettes = $recettes->listeRecettes('');
 $compteur = 0;
 ?>
 
