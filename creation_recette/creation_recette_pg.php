@@ -10,8 +10,6 @@ require_once '../template/view/nav.php';
 
 <div class="container">
 
-    <br>
-
     <div class="retourAjax"></div>
 
     <br>

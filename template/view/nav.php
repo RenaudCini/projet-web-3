@@ -24,8 +24,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/liste_recettes/liste_recettes_pg.php">Nos recettes <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/liste_recettes/liste_recettes_pg.php">Nos recettes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/creation_recette/creation_recette_pg.php">Créer votre recette</a>
