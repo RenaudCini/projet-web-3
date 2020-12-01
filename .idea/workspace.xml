@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/bdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,12 +103,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4d209ed0" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@21bf3324" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@86094c3" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -139,6 +132,7 @@
       <workItem from="1606809482190" duration="833000" />
       <workItem from="1606810357608" duration="6799000" />
       <workItem from="1606818499399" duration="5077000" />
+      <workItem from="1606836881685" duration="574000" />
     </task>
     <servers />
   </component>
@@ -191,14 +185,14 @@
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606754371401" />
-    <state x="2258" y="48" key="MergeDialog" timestamp="1606740932894">
+    <state x="2258" y="48" key="MergeDialog" timestamp="1606836909245">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2258" y="48" key="MergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740932894" />
-    <state x="2592" y="122" key="MultipleFileMergeDialog" timestamp="1606740932901">
+    <state x="2258" y="48" key="MergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606836909245" />
+    <state x="2592" y="122" key="MultipleFileMergeDialog" timestamp="1606836909252">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2592" y="122" key="MultipleFileMergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740932901" />
+    <state x="2592" y="122" key="MultipleFileMergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606836909252" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606828235491">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
@@ -213,10 +207,10 @@
     </state>
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743853507" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606820342865" />
-    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606810370754">
+    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606836881724">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606660675749" />
+    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606836881724" />
     <state x="465" y="258" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598595748313" />
     <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606810370754" />
     <state x="1952" y="114" width="1394" height="948" maximized="true" key="dock-window-1" timestamp="1606824071848">
