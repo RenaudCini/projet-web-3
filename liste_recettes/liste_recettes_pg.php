@@ -3,7 +3,7 @@ require_once '../index_sc.php';
 require_once '../nav.php';
 require_once '../index_sc.php';
 $recettes = new index_sc;
-$recettes = $recettes->listeRecettes(3);
+$recettes = $recettes->listeRecettes('limit 3');
 $compteur = 0;
 ?>
 

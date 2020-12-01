@@ -1,7 +1,7 @@
 <?php require_once 'nav.php';
 require_once 'index_sc.php';
 $recettes = new index_sc;
-$recettes = $recettes->listeRecettes(null);
+$recettes = $recettes->listeRecettes('');
 
 ?>
 

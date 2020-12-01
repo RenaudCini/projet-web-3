@@ -141,3 +141,6 @@ CREATE TABLE commentaires
     CONSTRAINT commentaires_utilisateurs0_FK FOREIGN KEY (id_utilisateurs) REFERENCES utilisateurs (id)
 
 ) ENGINE = InnoDB;
+
+
+SELECT * FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id ORDER BY r.id DESC limit 3

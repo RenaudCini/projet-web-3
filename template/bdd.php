@@ -30,14 +30,15 @@ class BDD
      *
      * @param string $sql
      * @param array $params
-     * @param int $limit
+     * @param string $limit
      * @return array|false
      */
-    public function selectTouteDonne(string $sql, array $params = [], int $limit)
+    public function selectTouteDonne(string $sql, string $limit, string $orderby, array $params = [])
     {
-        $limit = $limit ? intval($limit) : '';
-        $sql = $sql . $limit;
+
+        $sql = $sql . ' ' . $orderby . ' ' . $limit;
         $requete = $this->db->prepare($sql);
+ 
         $requete->execute($params);
 
         return $requete->fetchAll(PDO::FETCH_ASSOC);
