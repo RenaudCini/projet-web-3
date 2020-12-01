@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../asset/lib/bootstrap/bootstrap.min.css">
-    <title>Titre de la page</title>
+    <link rel="stylesheet" href="/asset/lib/bootstrap/bootstrap.min.css">
+    <?php
+    if (isset($css)) {
+        foreach ($css as $style) {
+            echo "<link rel='stylesheet' href='/asset/css/$style'>";
+        }
+    }
+    ?>
+    <title><?= $titrePage ?> &bull; Les recettes du développeur</title>
 </head>
 
 <body>
@@ -21,7 +28,7 @@
                     <a class="nav-link" href="/liste_recettes/liste_recettes_pg.php">Nos recettes <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/creation_recette/creation_recette_pg.phpç">Créer votre recette</a>
+                    <a class="nav-link" href="/creation_recette/creation_recette_pg.php">Créer votre recette</a>
                 </li>
 
             </ul>
