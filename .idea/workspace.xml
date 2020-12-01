@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_sc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liste_recettes/liste_recettes_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/liste_recettes/liste_recettes_pg.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liste_recettes/liste_recettes_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/liste_recettes/liste_recettes_sc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

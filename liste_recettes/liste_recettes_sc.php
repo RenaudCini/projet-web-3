@@ -1,5 +1,5 @@
 <?php
-require_once (dirname (__FILE__) . '/../template/model.php');
+require_once (__DIR__ . '/../template/model.php');
 
 class liste_recettes_sc extends model
 {

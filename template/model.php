@@ -44,7 +44,7 @@ class model
             image = :image,
             id_utilisateur = :id_utilisateur,
             temps = :temps',
-            ['titre' => $titre,
+            [   'titre' => $titre,
                 'difficulte' => $difficulte,
                 'budget' => $budget,
                 'image' => $image,
