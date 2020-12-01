@@ -1,4 +1,4 @@
-<?php require_once 'nav.php';
+<?php require_once 'template/view/nav.php';
 require_once 'liste_recettes/liste_recettes_sc.php';
 
 $recettes = new liste_recettes_sc;
@@ -40,4 +40,4 @@ $recettes = $recettes->listeRecettes('LIMIT 3');
         <?php  } ?>
     </div>
 
-    <?php require_once 'footer.php'; ?>
+    <?php require_once 'template/view/footer.php'; ?>

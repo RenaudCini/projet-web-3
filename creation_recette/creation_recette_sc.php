@@ -4,9 +4,6 @@ require_once '../template/model.php';
 class creation_recette_sc extends model
 {
 
-    /**
-     *
-     */
     public function listeMesures()
     {
         return $this->db->selectTouteDonne("SELECT * FROM mesures",null,'ORDER BY nom');
@@ -16,4 +13,3 @@ class creation_recette_sc extends model
 }
 
 
-?>

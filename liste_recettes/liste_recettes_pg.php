@@ -1,5 +1,5 @@
 <?php
-require_once '../nav.php';
+require_once '../template/view/nav.php';
 require_once 'liste_recettes_sc.php';
 $recettes = new liste_recettes_sc;
 $recettes = $recettes->listeRecettes('');
@@ -28,4 +28,4 @@ $compteur = 0;
 <?php $compteur++;
         } ?>
     </div>
-    <?php require_once '../footer.php';
+    <?php require_once '../template/view/footer.php';
