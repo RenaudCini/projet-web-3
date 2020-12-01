@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/asset/lib/bootstrap/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
 
-    <div class="row">
-        <div class="col-md-4 pb-3">
-            <div class="card">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <p class="text-right small text-secondary">Ecrit par USERNAME le DATE</p>
-                </div>
-            </div>
-        </div>
+
+    <p>Bootcamp</p>
+
+    <div class="form-group row justify-content-center">
+        <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
     </div>
+    <div class="row justify-content-center">
+        <button class="btn btn-primary" id="buttonSearch">Rechercher</button>
+    </div>
+
+    <script>
+        let buttonSearch = $("#buttonSearch");
+        buttonSearch.click(function() {
+            let valeur = $("#recherche").val();
+            console.log(valeur);
+        });
+    </script>
 
     <footer>
         <script src="/asset/lib/jquery/jquery.min.js"></script>
