@@ -1,6 +1,9 @@
-<?php require_once 'liste_recettes_sc.php';
+<?php
+require_once '../index_sc.php';
 require_once '../nav.php';
-$recettes = listeRecettes();
+require_once '../index_sc.php';
+$recettes = new index_sc;
+$recettes = $recettes->listeRecettes(3);
 $compteur = 0;
 ?>
 

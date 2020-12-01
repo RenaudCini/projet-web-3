@@ -6,7 +6,7 @@ class BDD
 
     public function __construct()
     {
-        $this->db = new PDO("mysql:host=localhost;dbname=lesrecettesdudeveloppeur", "root", "");
+        $this->db = new PDO('mysql:host=localhost;dbname=lesrecettesdudeveloppeur;charset=utf8', 'root', '');
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
@@ -30,10 +30,13 @@ class BDD
      *
      * @param string $sql
      * @param array $params
+     * @param int $limit
      * @return array|false
      */
-    public function selectTouteDonne(string $sql, array $params = [])
+    public function selectTouteDonne(string $sql, array $params = [], int $limit)
     {
+        $limit = $limit ? intval($limit) : '';
+        $sql = $sql . $limit;
         $requete = $this->db->prepare($sql);
         $requete->execute($params);
 
