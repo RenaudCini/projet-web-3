@@ -16,7 +16,7 @@ class model
      *
      * @return array
      */
-    public function RecupereRecette() :array
+    public function RecupereRecette(): array
     {
         $articles = $this->db->queryAll("SELECT * FROM `recettes` ORDER BY date DESC");
         return $articles;
@@ -25,34 +25,17 @@ class model
     /**
      * Permet d'ajouter un nouvel recette.
      *
-     * @param string $titre
-     * @param string $difficulte
-     * @param int $budget
-     * @param string $temps
-     * @param string $image L'URL de l'image de l'article.
-     * @param int $id_utilisateur
-     * @return int L'ID de l'article nouvellement créé.
+     * @param string $colone format colonne1,colonne 2,colonne 3,
+     * @param string $value format :nom de la valeur 1,:nom de valeur 2,
+     * @param array $array format nom => valeur
+     * @return int L'ID de la recette nouvellement créé.
      */
 
-    public function insertRecette( string $titre,  string $difficulte,int $budget,string $temps,string $image, int $id_utilisateur = 1) : int
+    public function insertRecette(string $colone, string $value, array $array): int
     {
-        $this->db->execute(
-            'INSERT INTO recette SET
-            titre = :titre,
-            difficulte = :difficulte,
-            budget = :budget,
-            image = :image,
-            id_utilisateur = :id_utilisateur,
-            temps = :temps',
-            [   'titre' => $titre,
-                'difficulte' => $difficulte,
-                'budget' => $budget,
-                'image' => $image,
-                'id_utilisateur' => $id_utilisateur,
-                'temps' => $temps,
-                'date' => 'NOW()'
-            ]
-        );
+
+        $req = $this->db->prepare("INSERT INTO recettes($colone) VALUES($value)");
+        $req->execute($array);
 
         return $this->db->lastInsertId();
     }

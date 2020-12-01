@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console.sql" beforeDir="false" afterPath="$PROJECT_DIR$/console.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_sc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/bdd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/view/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,11 +199,11 @@
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2592" y="122" key="MultipleFileMergeDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606740932901" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1606817683897">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1606828235491">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743814996" />
-    <state width="498" height="446" key="SwitcherDM/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606817683897" />
+    <state width="498" height="446" key="SwitcherDM/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606828235491" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606744603472">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
@@ -243,6 +239,10 @@
     <state x="2451" y="111" key="run.anything.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606748852550" />
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1598532238545" />
     <state x="2451" y="111" key="run.anything.popup/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606821025878" />
+    <state x="2543" y="100" width="672" height="678" key="search.everywhere.popup" timestamp="1606828535564">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="100" width="672" height="678" key="search.everywhere.popup/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606828535564" />
     <state x="2602" y="318" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606744459380">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
