@@ -44,6 +44,14 @@ class BDD
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function insertDonne(string $table, string $colone, string $value, array $array): int
+    {
+        $req = $this->db->prepare("INSERT INTO $table ($colone) VALUES($value)");
+        $req->execute($array);
+
+        return $this->db->lastInsertId();
+    }
+
     /**
      * Permet de retouner le dernier id
      *
