@@ -72,6 +72,19 @@ $(document).ready(function () {
             reponsesFormulaire.etapes.push(jsonEtape);
         });
 
+        $.ajax({
+            type: 'post',
+            url: 'creation_recette_tr.php',
+            data: {
+                creationRecette: true,
+                reponsesFormulaire
+            },
+            success: function (data) {
+                data = $.parseJSON(data);
+                $('.retourAjax').html("<div class='alert alert-success'>" + data + "</div>")
+            }
+        })
+
         console.log(reponsesFormulaire);
     });
 
