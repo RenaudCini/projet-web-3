@@ -11,7 +11,8 @@ $recettes = $recettes->listeRecettes('');
 $compteur = 0;
 ?>
 
-<body>
+<div class="container">
+
     <div class="form-group row justify-content-center">
         <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
     </div>
@@ -19,17 +20,24 @@ $compteur = 0;
         <button class="btn btn-primary" id="buttonSearch">Rechercher</button>
     </div>
 
+    <br>
+
     <div class="row">
-        <?php foreach ($recettes as $recette) {
-            if ($compteur % 3 === 0) :
-        ?> </div>
+        <?php
+        foreach ($recettes as $recette) :
+            if ($compteur % 3 === 0) : ?>
+    </div>
     <div class="row">
-    <?php endif ?>
+    <?php endif; ?>
     <div class="col-md-4 pb-3">
         <div class="card">
             <div class="card-body text-center">
                 <h5 class="card-title"><?= $recette['titre'] ?></h5>
-                <p class="card-text"><?= $recette['difficulte'] ?></p>
+                <p class="card-text">
+                    Difficulté : <?= $recette['difficulte'] ?><br>
+                    Budget : <?= $recette['budget'] ?><br>
+                    Temps : <?= $recette['temps'] ?><br>
+                </p>
                 <p class="text-right small text-secondary"> Ecrit par
                     <?= $recette['pseudo'] ?> le
                     <?= $recette['date'] ?>
@@ -37,8 +45,12 @@ $compteur = 0;
             </div>
         </div>
     </div>
-<?php $compteur++;
-        } ?>
+<?php
+            $compteur++;
+        endforeach;
+?>
     </div>
 
-    <?php require_once '../template/view/footer.php';
+</div>
+
+<?php require_once '../template/view/footer.php';

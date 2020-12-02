@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/profil/profil_pg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profil/profil_sc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/bdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +105,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@86094c3" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4d209ed0" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@21bf3324" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
