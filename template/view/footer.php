@@ -10,7 +10,6 @@
         }
     }
     ?>
-
     <div class="bg-dark text-white text-center p-3 container-fluid m-0">
         <p><a class="text-white" href="#">Facebook</a>
             &bull; <a class="text-white" href="#">Twitter</a>
