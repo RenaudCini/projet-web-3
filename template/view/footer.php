@@ -2,6 +2,7 @@
     <script src="/asset/lib/jquery/jquery.min.js"></script>
     <script src="/asset/lib/popper/popper.min.js"></script>
     <script src="/asset/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="/asset/js/main.js"></script>
     <?php
     if (isset($js)) {
         foreach ($js as $script) {
@@ -9,7 +10,6 @@
         }
     }
     ?>
-
     <div class="bg-dark text-white text-center p-3 container-fluid m-0">
         <p><a class="text-white" href="#">Facebook</a>
             &bull; <a class="text-white" href="#">Twitter</a>
