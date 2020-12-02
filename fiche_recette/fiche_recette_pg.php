@@ -124,6 +124,7 @@ require_once '../template/view/nav.php';
 
                             <h5 class="text-center my-4">Laisser un commentaire</h5>
 
+
                             <?php if (isset($_SESSION['id'])) : ?>
 
                                 <!-- Si l'utilisateur est connecté : -->
