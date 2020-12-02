@@ -3,22 +3,38 @@
 require_once 'fiche_recette_sc.php';
 
 $titrePage = 'Fiche recette';
+$js[] = 'commentaire.js';
 
 require_once '../template/view/nav.php';
+
+// Si on a bien un ID en GET :
+if (filter_input(INPUT_GET, 'id')) {
+
+    $idRecette = filter_input(INPUT_GET, 'id');
+
+    // On récupère les informations de la recette :
+    $recette = recupererRecette($idRecette);
+
+    // Si on récupère bien une recette :
+    if ($recette) {
+        $etapes = recupererEtapes($idRecette);
+        $ingredients = recupererIngredients($idRecette);
+        $commentaires = recupererCommentaires($idRecette);
+
+        if ($commentaires) {
+            $arrayNotes = [];
+            foreach ($commentaires as $commentaire) {
+                $arrayNotes[] = intval($commentaire['note']);
+            }
+            $noteMoyenne = round(array_sum($arrayNotes) / count($arrayNotes));
+        } else {
+            $noteMoyenne = 0;
+        }
+
 ?>
 
         <div class="container">
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <img src="https://picsum.photos/1000/200?random=10" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Sauté de boeuf</h5>
-                </div>
-            </div>
-        </div>
-    </div>
             <div id="idRecettes" class="d-none" idRecettes="<?= $recette['id'] ?>"></div>
 
             <div class="row">
