@@ -14,7 +14,7 @@
         <p><a class="text-white" href="#">Facebook</a>
             &bull; <a class="text-white" href="#">Twitter</a>
             &bull; <a class="text-white" href="#">Instagram</a></p>
-        <p><a class="text-white" href="#">Nous contacter</a>
+        <p><a class="text-white" href="../contact/nous_contacter_pg.php">Nous contacter</a>
 
         </p>
         <p>
