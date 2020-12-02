@@ -10,6 +10,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/asset/lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/asset/lib/fontawesome/fontawesome.css">
     <link rel="stylesheet" href="/asset/css/main.css">
     <?php
     if (isset($css)) {
