@@ -142,20 +142,46 @@ CREATE TABLE commentaires
 
 ) ENGINE = InnoDB;
 
+CREATE TABLE favoris
+(
+    id_utilisateurs Int NOT NULL,
+    id_recettes     Int NOT NULL,
+    bool            INT NOT NULL,
 
-SELECT * FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id ORDER BY r.id DESC limit 3
+    CONSTRAINT favoriss_PK PRIMARY KEY (id_recettes, id_utilisateurs),
+    CONSTRAINT favoris_recettes_FK FOREIGN KEY (id_recettes) REFERENCES recettes (id),
+    CONSTRAINT favoris_utilisateurs0_FK FOREIGN KEY (id_utilisateurs) REFERENCES utilisateurs (id)
 
-INSERT INTO mesures (nom) VALUES
-('gramme(s)'),
-('kilogramme(s)'),
-('pincée(s)'),
-('cuillère(s) à café'),
-( 'cuillère(s) à soupe'),
-('litre(s)'),
-('centilitre(s)');
+) ENGINE = InnoDB;
 
-INSERT INTO utilisateurs (id, pseudo, mail, mdp, date_inscription, derniere_connexion, id_roles) VALUES (NULL, 'AdamSky', 'adamsky@mail.com', '123456', '2020-12-01 04:07:10', '', '1');
+SELECT *
+FROM recettes AS r
+         INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id
+ORDER BY r.id DESC
+limit 3
 
-INSERT INTO recettes (id, titre, difficulte, budget, temps, date, image, id_utilisateurs) VALUES (NULL, 'Sauté de boeuf', '3', '4', '45 min', '2020-12-01 09:12:11', '', '1');
+INSERT INTO mesures (nom)
+VALUES ('gramme(s)'),
+       ('kilogramme(s)'),
+       ('pincée(s)'),
+       ('cuillère(s) à café'),
+       ('cuillère(s) à soupe'),
+       ('litre(s)'),
+       ('centilitre(s)');
 
-INSERT INTO roles (id, nom) VALUES (NULL, 'Administrateur');
+INSERT INTO utilisateurs (id, pseudo, mail, mdp, date_inscription, derniere_connexion, id_roles)
+VALUES (NULL, 'AdamSky', 'adamsky@mail.com', '123456', '2020-12-01 04:07:10', '', '1');
+
+INSERT INTO recettes (id, titre, difficulte, budget, temps, date, image, id_utilisateurs)
+VALUES (NULL, 'Sauté de boeuf', '3', '4', '45 min', '2020-12-01 09:12:11', '', '1');
+
+INSERT INTO roles (id, nom)
+VALUES (NULL, 'Administrateur');
+
+
+select i.nom,c.quantite,m.nom from  listes l
+                                        INNER JOIN recettes r ON l.id_recettes =r.id
+                                        INNER JOIN compositions c on r.id = c.id_recettes
+                                        INNER JOIN ingredients i on c.id_ingredients = i.id
+                                        INNER JOIN mesures m on c.id_mesures = m.id
+WHERE l.id_utilisateurs = 8

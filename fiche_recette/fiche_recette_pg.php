@@ -11,7 +11,7 @@ require_once '../template/view/nav.php';
             <div class="card">
                 <img src="https://picsum.photos/1000/200?random=10" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h4 class="card-title">Sauté de boeuf</h5>
+                    <h5 class="card-title">Sauté de boeuf</h5>
                 </div>
             </div>
         </div>
