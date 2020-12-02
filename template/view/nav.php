@@ -32,23 +32,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/creation_recette/creation_recette_pg.php">Créer votre recette</a>
                 </li>
-
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
 
             <?php if (isset($_SESSION['id'], $_SESSION['pseudo'])) : ?>
                 <div class="my-0">
                     <a class="btn btn-outline-light" href="/" role="button">
                         Bonjour, <b><?= $_SESSION['pseudo'] ?></b>
                     </a>
-                </div>';
+                </div>
             <?php else : ?>
                 <div class="my-0">
                     <button class="btn btn-outline-light" data-toggle="modal" data-target="#modal_connexion">Connexion</button>
-                </div>';
+                </div>
             <?php endif; ?>
         </div>
     </nav>
