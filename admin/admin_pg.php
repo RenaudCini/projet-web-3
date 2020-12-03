@@ -39,7 +39,7 @@ if (isset($_SESSION['id'])) :
                     <!-- actif-->
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary">role</button>
+                            <button class="btn btn-outline-secondary">status</button>
                         </div>
                         <select class="custom-select" id="inputGroupSelect03"
                                 aria-label="Example select with button addon">
