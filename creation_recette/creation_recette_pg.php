@@ -106,21 +106,36 @@ if (isset($_SESSION['id'])) :
                 <div class="card-body">
                     <form class="offset-md-2 col-md-8">
                         <div class="form-group row">
-                            <label for="budget" class="text-right col-sm-2 col-form-label">Budget</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="budget">
+                            <label for="budget" class="text-right col-sm-6"><b>Budget :</b></label>
+                            <div class="col-sm-6 text-left">
+                                <div class="budgetCercles">
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="difficulte" class="text-right col-sm-2 col-form-label">Difficulté</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="difficulte">
+                            <label for="difficulte" class="text-right col-sm-6"><b>Difficulté :</b></label>
+                            <div class="col-sm-6 text-left">
+                                <div class="difficulteCercles">
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                    <span class='noteCercle far fa-circle fa-xs'></span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="temps" class="text-right col-sm-2 col-form-label">Temps</label>
-                            <div class="col-sm-10">
+                            <label for="temps" class="text-right col-sm-5 col-form-label"><b>Temps :</b></label>
+                            <div class="col-sm-2">
                                 <input type="text" class="form-control" id="temps">
+                            </div>
+                            <div class="col-form-label col-sm-2 text-left">
+                                minutes
                             </div>
                         </div>
                     </form>

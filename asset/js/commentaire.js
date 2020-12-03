@@ -4,8 +4,6 @@ $(document).ready(function () {
         $(this).addClass('fas').removeClass('far');
         $(this).prevAll().addClass('fas').removeClass('far');
         $(this).nextAll().addClass('far').removeClass('fas');
-
-        console.log($('.etoilesNote .fas').length);
     });
 
     // Envoi du commentaire :
