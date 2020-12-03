@@ -27,7 +27,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Accueil</a>
+        <a class="navbar-brand" href="/">Les recettes du développeur</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
             <?php if (isset($_SESSION['id'], $_SESSION['pseudo'])) : ?>
                 <div class="my-0">
-                    <a class="btn btn-outline-light" href="/" role="button">
+                    <a class="btn btn-outline-light" href="/profil/profil_pg.php" role="button">
                         Bonjour, <b><?= $_SESSION['pseudo'] ?></b>
                     </a>
                 </div>
@@ -81,8 +81,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                             <button type="button" id="btn_envoi_connexion" class="btn btn-outline-primary">Se connecter</button>
                             <br /><br />
                             <small class="form-text text-muted">
-                                <a href="/">Mot de passe oublié ?</a> &bull;
-                                <a id="lien_inscription" href="#">S'inscrire</a>
+                                <!-- <a href="/">Mot de passe oublié ?</a> &bull; -->
+                                <a id="lien_inscription" href="#">Pas de compte chez nous ?</a>
                             </small>
                         </div>
                     </form>
