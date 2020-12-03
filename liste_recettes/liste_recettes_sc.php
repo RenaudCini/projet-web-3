@@ -12,6 +12,15 @@ class liste_recettes_sc extends model
         return $this->db->selectTouteDonne('SELECT r.id, r.titre, r.budget, r.difficulte, r.temps, r.date, r.image, u.pseudo
          FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id ', $limit, 'ORDER BY r.id DESC');
     }
+
+    public function listeRecettesGet($paramGet)
+    {
+        /**
+         * Récupération des  recettes
+         */
+        return $this->db->selectTouteDonne('SELECT r.id, r.titre, r.budget, r.difficulte, r.temps, r.date, r.image, u.pseudo
+         FROM recettes AS r INNER JOIN utilisateurs AS u ON r.id_utilisateurs = u.id WHERE titre LIKE :paramGet', '', 'ORDER BY r.id DESC', ['paramGet' => "%$paramGet%"]);
+    }
 }
 
 function creerIcones($valeur, $typeIcones)

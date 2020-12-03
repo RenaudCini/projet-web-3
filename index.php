@@ -10,12 +10,14 @@ $recettes = $recettes->listeRecettes('LIMIT 3');
     <div class="container">
 
         <!-- La barre de recherche de la page -->
-        <div class="form-group row justify-content-center">
-            <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
-        </div>
-        <div class="row justify-content-center">
-            <button class="btn btn-primary mb-4" id="buttonSearch">Rechercher</button>
-        </div>
+        <form method="get" action="/liste_recettes/liste_recettes_pg.php">
+            <div class="form-group row justify-content-center">
+                <input type="text" class="form-control col-6 text-center" id="recette" name="recette" placeholder="Tapez votre recette ici">
+            </div>
+            <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary mb-4" id="buttonSearch">Rechercher</button>
+            </div>
+        </form>
 
         <!-- Le carousel de la page -->
         <div id="carouselExampleIndicators" class="carousel slide rounded" data-ride="carousel">
