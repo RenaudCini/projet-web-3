@@ -66,4 +66,22 @@ $(document).ready(function () {
 
     });
 
+    // // Export PDF Liste courses :
+    // $('#btnExportListePDF').click(function () {
+    //     let idUtilisateur = $(this).attr('data-idUtilisateur');
+
+    //     $.ajax({
+    //         url: "/utilisateurs/export_PDF.php",
+    //         type: "post",
+    //         data: {
+    //             exportPDF: true,
+    //             idUtilisateur
+    //         },
+    //         success: function (data) {
+    //             window.open('/utilisateurs/liste_courses.php')
+    //         }
+    //     })
+
+    // });
+
 });

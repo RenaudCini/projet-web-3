@@ -53,6 +53,25 @@ function supprimerTouteListe($idUtilisateur)
     );
 }
 
+
+function recupererListeCourses($idUtilisateur)
+{
+    $bdd = new BDD;
+    return $bdd->selectTouteDonne(
+        "SELECT i.nom AS ingredient, sum(c.quantite) AS quantite, m.nom AS mesure
+            FROM listes l
+            INNER JOIN recettes r ON l.id_recettes = r.id
+            INNER JOIN compositions c on r.id = c.id_recettes
+            INNER JOIN ingredients i on c.id_ingredients = i.id
+            INNER JOIN mesures m on c.id_mesures = m.id
+            WHERE l.id_utilisateurs = :id 
+            GROUP BY i.nom, m.nom",
+        '',
+        'ORDER BY i.nom ASC',
+        ['id' => $idUtilisateur]
+    );
+}
+
 if (isset($_POST['actionRecetteListeCourses'], $_POST['idRecette'], $_POST['idUtilisateur'], $_POST['action'])) {
     $idRecette = intval($_POST['idRecette']);
     $idUtilisateur = intval($_POST['idUtilisateur']);
