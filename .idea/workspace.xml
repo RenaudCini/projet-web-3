@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="profil">
-      <change afterPath="$PROJECT_DIR$/template/PDF.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/view/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fpdf/PDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/fpdf/PDF.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,13 +68,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projet-web-3" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projet-web-3\template\fpdf" />
       <recent name="C:\wamp64\www\projet-web-3\template\view" />
       <recent name="C:\wamp64\www\projet-web-3" />
       <recent name="C:\wamp64\www\projet-web-3\template" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\projet-web-3" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -127,7 +126,7 @@
       <workItem from="1606810357608" duration="6799000" />
       <workItem from="1606818499399" duration="5077000" />
       <workItem from="1606918857067" duration="9488000" />
-      <workItem from="1606981896707" duration="7105000" />
+      <workItem from="1606981896707" duration="7700000" />
     </task>
     <servers />
   </component>
