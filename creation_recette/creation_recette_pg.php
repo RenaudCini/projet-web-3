@@ -29,9 +29,7 @@ if (isset($_SESSION['id'])) :
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Ingrédients</h5>
-
                     <br>
-
                     <div class="ingredients">
                         <div class="inputIngredientModele">
                             <div class="ingredient row">
@@ -152,7 +150,6 @@ if (isset($_SESSION['id'])) :
             <button class="btn btn-success btnEnvoiFormulaire">Valider</button>
             <br><br>
         </div>
-
     </div>
 
 <?php

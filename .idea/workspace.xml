@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="profil">
+      <change afterPath="$PROJECT_DIR$/template/PDF.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/js/profil.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/profil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil/profil_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil/profil_pg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil/profil_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil/profil_sc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil/profil_tr.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil/profil_tr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/creation_recette/creation_recette_pg.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/view/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,13 +43,6 @@
         <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="favoris: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -102,6 +92,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@52d4c717" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@80f77b0" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
@@ -132,7 +127,7 @@
       <workItem from="1606810357608" duration="6799000" />
       <workItem from="1606818499399" duration="5077000" />
       <workItem from="1606918857067" duration="9488000" />
-      <workItem from="1606981896707" duration="3505000" />
+      <workItem from="1606981896707" duration="7105000" />
     </task>
     <servers />
   </component>
@@ -140,6 +135,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2472" y="64" key="#Inspections" timestamp="1606987311057">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2472" y="64" key="#Inspections/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606987311057" />
     <state x="2472" y="64" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606924217071">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
@@ -226,10 +225,10 @@
     </state>
     <state x="264" y="0" width="966" height="948" maximized="true" key="dock-window-1/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985306300" />
     <state x="1952" y="114" width="1394" height="948" maximized="true" key="dock-window-1/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606824071848" />
-    <state x="2499" y="70" width="764" height="670" key="find.popup" timestamp="1606921387617">
+    <state x="2499" y="70" width="764" height="670" key="find.popup" timestamp="1606987699266">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2499" y="70" width="764" height="670" key="find.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921387617" />
+    <state x="2499" y="70" width="764" height="670" key="find.popup/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606987699266" />
     <state x="463" y="164" width="611" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1598597026037" />
     <state x="2621" y="39" key="refactoring.ChangeSignatureDialog" timestamp="1606811473494">
       <screen x="1920" y="-135" width="1920" height="1080" />
