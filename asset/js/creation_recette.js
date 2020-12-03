@@ -36,12 +36,13 @@ $(document).ready(function () {
     // Envoi du formulaire :
     $('.btnEnvoiFormulaire').click(function () {
 
+        let erreur = false;
+
         let titre = $('#titre').val();
         let budget = $('.budgetCercles .fas').length;
         let difficulte = $('.difficulteCercles .fas').length;
         let temps = $('#temps').val();
         let image = $('#image').val();
-
 
         let reponsesFormulaire = {
             titre,

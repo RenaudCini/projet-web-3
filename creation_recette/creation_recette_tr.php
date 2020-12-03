@@ -8,16 +8,19 @@ if ($_POST['creationRecette'] && $_POST['reponsesFormulaire']) {
     $bdd = new BDD;
 
     $reponses = $_POST['reponsesFormulaire'];
+    var_dump($reponses);
+    die;
 
     $titre = $reponses['titre'];
-    $difficulte = $reponses['difficulte'];
-    $budget = $reponses['budget'];
-    $temps = $reponses['temps'];
+    $difficulte = intval($reponses['difficulte']);
+    $budget = intval($reponses['budget']);
+    $temps = intval($reponses['temps']);
     $image = $reponses['image'];
 
-    if ($titre && $difficulte && $budget && $temps && $image) {
+    $ingredients = $reponses['ingredients'];
+    $etapes = $reponses['etapes'];
 
-
+    if ($titre && $difficulte && $budget && $temps && $image && count($ingredients) > 0 && count($etapes) > 0) {
 
         // Insertion dans la table recettes :
         $idRecette = $bdd->insertDonne(
@@ -25,17 +28,16 @@ if ($_POST['creationRecette'] && $_POST['reponsesFormulaire']) {
             'titre, difficulte, budget, temps, date, image, id_utilisateurs',
             ':titre, :difficulte, :budget, :temps, NOW(), :image, :id_utilisateurs',
             [
-                'titre' => $reponses['titre'],
-                'difficulte' => $reponses['difficulte'],
-                'budget' => $reponses['budget'],
-                'temps' => $reponses['temps'],
-                'image' => $reponses['image'],
+                'titre' => $titre,
+                'difficulte' => $difficulte,
+                'budget' => $budget,
+                'temps' => $temps,
+                'image' => $image,
                 'id_utilisateurs' => $_SESSION['id']
             ]
         );
 
         // Insertion des étapes :
-        $etapes = $reponses['etapes'];
         foreach ($etapes as $etape) {
             $bdd->insertDonne(
                 'etapes',
@@ -50,7 +52,6 @@ if ($_POST['creationRecette'] && $_POST['reponsesFormulaire']) {
         }
 
         // Insertion de la composition :
-        $ingredients = $reponses['ingredients'];
         foreach ($ingredients as $ingredient) {
             // On regarde si l'ingrédient existe déjà, si oui on récupère son ID, si non on l'insère :
             $select = 'SELECT id FROM ingredients WHERE nom = :nom';
