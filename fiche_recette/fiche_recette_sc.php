@@ -55,3 +55,15 @@ function creerIcones($valeur, $typeIcones)
         echo "<i class='far fa-$typeIcones fa-xs'></i> ";
     }
 }
+
+function checkSiUtilisateurAListe($idRecette, $idUtilisateur)
+{
+    $bdd = new BDD;
+    return $bdd->selectUneDonne(
+        "SELECT * FROM listes WHERE id_recettes = :id_recettes AND id_utilisateurs = :id_utilisateurs",
+        [
+            'id_recettes' => $idRecette,
+            'id_utilisateurs' => $idUtilisateur
+        ]
+    );
+}

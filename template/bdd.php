@@ -59,6 +59,12 @@ class BDD
         return $this->db->lastInsertId();
     }
 
+    public function supprDonnee(string $table, string $where, array $array)
+    {
+        $req = $this->db->prepare("DELETE FROM $table WHERE $where");
+        return $req->execute($array);
+    }
+
     /**
      * Permet de retouner le dernier id
      *

@@ -3,7 +3,7 @@
 require_once 'fiche_recette_sc.php';
 
 $titrePage = 'Fiche recette';
-$js[] = 'fiche_recette.js';
+$js[] = 'liste_courses.js';
 $js[] = 'commentaire.js';
 
 require_once '../template/view/nav.php';
@@ -84,9 +84,19 @@ if (filter_input(INPUT_GET, 'id')) {
                                 ?>
                             </ul>
 
-                            <?php if (isset($_SESSION['id'])) : ?>
-                                <button id="btnAjoutListeCourses" class="btn btn-outline-dark btn-block my-4" data-idRecette="<?= $recette['id'] ?>" data-idUtilisateur="<?= $_SESSION['id'] ?>">
-                                    <i class="fas fa-shopping-cart pr-2"></i>Ajouter à la liste de courses
+                            <div id="ajaxListeCourses"></div>
+
+                            <?php if (isset($_SESSION['id'])) :
+                                if (checkSiUtilisateurAListe($recette['id'], $_SESSION['id'])) {
+                                    $btnAction = "retrait";
+                                    $btnContenu = "Retirer de";
+                                } else {
+                                    $btnAction = "ajout";
+                                    $btnContenu = "Ajouter à";
+                                }
+                            ?>
+                                <button id="btnActionListeCourses" class="btn btn-outline-dark btn-block my-4" data-action="<?= $btnAction ?>" data-idRecette="<?= $recette['id'] ?>" data-idUtilisateur="<?= $_SESSION['id'] ?>">
+                                    <i class="fas fa-shopping-cart pr-2"></i><span class="contenuVariableBoutonListe"><?= $btnContenu ?></span> la liste de courses
                                 </button>
                             <?php else : ?>
 
