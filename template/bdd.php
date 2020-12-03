@@ -28,7 +28,11 @@ class BDD
     public function updateDonne($sql, $array)
     {
         $req = $this->db->prepare($sql);
-        $req->execute($array);
+        if ($req->execute($array)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
