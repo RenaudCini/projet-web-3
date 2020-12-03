@@ -88,7 +88,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 data = $.parseJSON(data);
-                $('.retourAjax').html("<div class='alert alert-success'>" + data + "</div>")
+                $('.retourAjax').html("<div class='alert alert-info'>" + data + "</div>")
             }
         })
 
