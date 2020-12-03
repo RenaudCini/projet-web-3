@@ -42,7 +42,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 
             <?php if (isset($_SESSION['id'], $_SESSION['pseudo'])) : ?>
                 <div class="my-0">
-                    <a class="btn btn-outline-light" href="/" role="button">
+                    <a class="btn btn-outline-light" href="/profil/profil_pg.php" role="button">
                         Bonjour, <b><?= $_SESSION['pseudo'] ?></b>
                     </a>
                 </div>
@@ -79,8 +79,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                             <button type="button" id="btn_envoi_connexion" class="btn btn-outline-primary">Se connecter</button>
                             <br /><br />
                             <small class="form-text text-muted">
-                                <a href="/">Mot de passe oublié ?</a> &bull;
-                                <a id="lien_inscription" href="#">S'inscrire</a>
+                                <!-- <a href="/">Mot de passe oublié ?</a> &bull; -->
+                                <a id="lien_inscription" href="#">Pas de compte chez nous ?</a>
                             </small>
                         </div>
                     </form>
