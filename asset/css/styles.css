@@ -5,3 +5,11 @@
 {
     border-left: 1px solid #dbd8cf;
 }
+.ml-6
+{
+    margin-left: 3rem !important;
+}
+
+.cadre{
+    border: solid 1px; ;
+}

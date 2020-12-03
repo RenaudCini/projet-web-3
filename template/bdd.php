@@ -33,7 +33,7 @@ class BDD
      * @param string $limit
      * @return array|false
      */
-    public function selectTouteDonne(string $sql, string $limit, string $orderby, array $params = [])
+    public function selectTouteDonne(string $sql, string $limit, string $orderby, array $params = []):array
     {
 
         $sql .= ' ' . $orderby . ' ' . $limit;

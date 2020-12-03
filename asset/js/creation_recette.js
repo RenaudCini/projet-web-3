@@ -26,12 +26,19 @@ $(document).ready(function () {
         }
     });
 
+    // Budget et difficulté :
+    $('.noteCercle').click(function () {
+        $(this).addClass('fas').removeClass('far');
+        $(this).prevAll().addClass('fas').removeClass('far');
+        $(this).nextAll().addClass('far').removeClass('fas');
+    });
+
     // Envoi du formulaire :
     $('.btnEnvoiFormulaire').click(function () {
 
         let titre = $('#titre').val();
-        let budget = $('#budget').val();
-        let difficulte = $('#difficulte').val();
+        let budget = $('.budgetCercles .fas').length;
+        let difficulte = $('.difficulteCercles .fas').length;
         let temps = $('#temps').val();
         let image = $('#image').val();
 
