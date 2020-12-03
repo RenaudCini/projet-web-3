@@ -8,31 +8,44 @@ $recettes = $recettes->listeRecettes('LIMIT 3');
 
 <body>
     <div class="container">
+
         <!-- La barre de recherche de la page -->
         <div class="form-group row justify-content-center">
-            <input type="text" class="form-control col-6 text-center mt-4 mb-4" id="recherche" placeholder="Tapez votre recette ici">
+            <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
         </div>
         <div class="row justify-content-center">
-            <button class="btn btn-primary mt-4 mb-4" id="buttonSearch">Rechercher</button>
+            <button class="btn btn-primary mb-4" id="buttonSearch">Rechercher</button>
         </div>
 
         <!-- Le carousel de la page -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide rounded" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <!-- Premier carousel -->
-            <div class="carousel-inner">
+            <div class="carousel-inner rounded">
                 <div class="carousel-item active">
-                    <img src="https://picsum.photos/1000/200?random=1" class="d-block w-100" alt="First">
+                    <img style="filter: brightness(0.4);" src="https://picsum.photos/1000/200?random=1" class="rounded d-block w-100" alt="First">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Une envie de légumes ?</h5>
+                        <p>Découvrez nos recettes aux carottes.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1000/200?random=2" class="d-block w-100" alt="Second">
+                    <img style="filter: brightness(0.4);" src="https://picsum.photos/1000/200?random=2" class="rounded d-block w-100" alt="Second">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Envie de nous partager une recette ?</h5>
+                        <p>Inscrivez-vous ou connectez-vous pour écrire votre propre recette.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="https://picsum.photos/1000/200?random=3" class="d-block w-100" alt="Third">
+                    <img style="filter: brightness(0.4);" src="https://picsum.photos/1000/200?random=3" class="rounded d-block w-100" alt="Third">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Besoin d'un renseignement ?</h5>
+                        <p>N'hésitez pas à remplir notre formulaire de contact en cliquant sur "Nous contacter".</p>
+                    </div>
                 </div>
             </div>
             <!-- Deuxième -->
@@ -47,27 +60,50 @@ $recettes = $recettes->listeRecettes('LIMIT 3');
             </a>
         </div>
 
-        <div class="col-12 text-center mt-2">
+        <hr class="my-4">
+
+        <div class="col-12 text-center mb-5">
             <h3>Les nouveautés</h3>
         </div>
 
         <!-- Les 3 dernières recettes (les plus récentes)-->
         <div class="row">
-            <?php foreach ($recettes as $recette) {
-            ?>
-                <div class="col-md-4 pb-3 mt-4">
-                    <a class="card" style="text-decoration: none;" href="http://lesrecettesdudeveloppeur.test/fiche_recette/fiche_recette_pg.php?id=<?= $recette['id'] ?>">
-                        <div class="card-body text-center">
-                            <h5 class="card-title"><?= $recette['titre'] ?></h5>
-                            <p class="card-text"><?= $recette['difficulte'] ?></p>
-                            <p class="text-right small text-secondary"> Ecrit par
-                                <?= $recette['pseudo'] ?> le
-                                <?= $recette['date'] ?>
-                            </p>
-                        </div>
-                    </a>
+            <?php
+            $compteur = 0;
+            foreach ($recettes as $recette) :
+                if ($compteur % 3 === 0) : ?>
+        </div>
+        <div class="row">
+        <?php endif; ?>
+        <div class="col-md-4 pb-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title"><?= $recette['titre'] ?></h5>
+                    <div class="row">
+                        <div class="col-md-6 text-right">Difficulté :</div>
+                        <div class="col-md-6 text-left"><?= creerIcones($recette['difficulte'], 'circle') ?></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">Budget :</div>
+                        <div class="col-md-6 text-left"><?= creerIcones($recette['budget'], 'circle') ?></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 text-right">Temps :</div>
+                        <div class="col-md-6 text-left"><b><?= $recette['temps'] ?> min.</b></div>
+                    </div>
+                    <br>
+                    <p class="small text-secondary"> Ecrit par
+                        <?= $recette['pseudo'] ?> le
+                        <?= $recette['date'] ?>
+                    </p>
+                    <a class="btn btn-outline-dark" target="_blank" href="/fiche_recette/fiche_recette_pg.php?id=<?= $recette['id'] ?>">Voir la recette</a>
                 </div>
-            <?php  } ?>
+            </div>
+        </div>
+    <?php
+                $compteur++;
+            endforeach;
+    ?>
         </div>
     </div>
 
