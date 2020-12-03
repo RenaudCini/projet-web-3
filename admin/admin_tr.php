@@ -7,7 +7,9 @@ if ($_POST['action'] === 'datatable') {
     $admin = new admin_sc();
 
    $data = $admin->afficherToutUtilisateur();
-   echo json_encode(['respons'=>'sucess','data'=>$data]);
+
+
+   echo json_encode(['data'=>$data]);
 }
 
 

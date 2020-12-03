@@ -1,22 +1,37 @@
 $(document).ready(function () {
- let table = $('#example').DataTable({
+    $('#example').DataTable({
+        "processing": true,
+
         "ajax": {
             "url": "admin_tr.php",
-            type: 'post',
-            data: {
+            "type": 'post',
+            "data": {
                 'action': 'datatable',
-
             }
         },
-        "columnDefs": [{
-            "targets": -1,
-            "data": data,
-            "defaultContent": "<button>Click!</button>"
-        }]
+        "columns": [
+            {"data": "pseudo"},
+            {"data": "mail"},
+            {"data": "date_inscription"},
+            {"data": "derniere_connexion"},
+            {"data": "id_roles"},
+            {"data": "actif"},
+            {
+                "data": "button",
+                'render': function (data) {
+                    return data =
+                "<button type='button' id=' + data + ' class='btn  btn-secondary buttonAdmin' data-toggle='modal' data-target='#exampleModal'>Modifer </button>"
+
+                }
+            }
+        ]
     });
 
-    $('#example tbody').on('click', 'button', function () {
-        var data = table.row($(this).parents('tr')).data();
-        alert(data[0] + "'s salary is: " + data[5]);
+
+    $('body').on('click', '.buttonAdmin',function () {
+        let button = $('.buttonAdmin ')
+
+
     });
 });
+
