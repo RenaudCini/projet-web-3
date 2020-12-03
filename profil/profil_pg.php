@@ -5,7 +5,9 @@ $profil = new profil_sc();
 $titrePage = 'Profil';
 $js[] = 'profil.js';
 
-$utilisateur = $profil->afficherUnUtilisateur(3);
+$ingredients = $profil->afficheIngredient(8);
+$utilisateur = $profil->afficherUnUtilisateur(8);
+$favoris = $profil->afficherRecettesFavorites(8);
 require_once '../template/view/nav.php';
 ?>
 
@@ -19,29 +21,38 @@ require_once '../template/view/nav.php';
                     <button type="button" class="btn btn-light mr-5">Se déconnecter</button>
                 </div>
                 <HR class="col-11">
-
-                <div>
-                    <!--liste de courses s -->
-                    <div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="list-group" id="list-tab" role="tablist">
-
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="tab-content" id="nav-tabContent">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--favoris -->
-                    <div>
-                    </div>
-                </div>
+                <div class="col-1"></div>
             </div>
+            <div class="col-1"></div>
+            <!--liste de courses s -->
+            <div class="col-4 cadre mr-2 p-2">
+                <h2>Ma liste de courses</h2>
+                <table id="example" class="display" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>ingredient</th>
+                        <th>quantite</th>
+                        <th>Mesure</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($ingredients as $ingredient) { ?>
+                        <tr>
+                            <td> <?php echo($ingredient['ingredient']) ?></td>
+                            <td> <?php echo($ingredient['quantite']) ?></td>
+                            <td> <?php echo($ingredient['mesure']) ?></td>
+                        </tr>
+                        <?php
+                    } ?>
+                    </tbody>
+                </table>
+            </div>
+            <!--favoris -->
+            <div class="col-6 mr-2  p-2 cadre">
+
+            </div>
+            <div class="1"></div>
+
         </div>
     </div>
 <?php

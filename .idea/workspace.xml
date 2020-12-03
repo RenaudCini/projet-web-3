@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asset/js/profil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profil/profil_tr.php" afterDir="false" />
+    <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="profil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/asset/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/asset/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console.sql" beforeDir="false" afterPath="$PROJECT_DIR$/console.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiche_recette/fiche_recette_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/fiche_recette/fiche_recette_pg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/js/profil.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/profil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profil/profil_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil/profil_pg.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profil/profil_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil/profil_sc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/bdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/bdd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil/profil_tr.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil/profil_tr.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/view/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,21 +52,7 @@
         <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="compositions: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="mesures: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="utilisateurs: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="favoris: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -119,7 +102,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@30b3a08" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@80f77b0" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -149,6 +132,7 @@
       <workItem from="1606810357608" duration="6799000" />
       <workItem from="1606818499399" duration="5077000" />
       <workItem from="1606918857067" duration="9488000" />
+      <workItem from="1606981896707" duration="3505000" />
     </task>
     <servers />
   </component>
@@ -181,25 +165,25 @@
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2660" y="161" key="FileChooserDialogImpl/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606918749004" />
-    <state width="1293" height="294" key="GridCell.Tab.0.bottom" timestamp="1606921494476">
+    <state width="1293" height="294" key="GridCell.Tab.0.bottom" timestamp="1606985191285">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state width="1293" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921494476" />
+    <state width="1293" height="294" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985191285" />
     <state width="1293" height="295" key="GridCell.Tab.0.bottom/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606827372685" />
-    <state width="1293" height="294" key="GridCell.Tab.0.center" timestamp="1606921494476">
+    <state width="1293" height="294" key="GridCell.Tab.0.center" timestamp="1606985191284">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state width="1293" height="294" key="GridCell.Tab.0.center/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921494476" />
+    <state width="1293" height="294" key="GridCell.Tab.0.center/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985191284" />
     <state width="1293" height="295" key="GridCell.Tab.0.center/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606827372685" />
-    <state width="1293" height="294" key="GridCell.Tab.0.left" timestamp="1606921494476">
+    <state width="1293" height="294" key="GridCell.Tab.0.left" timestamp="1606985191284">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state width="1293" height="294" key="GridCell.Tab.0.left/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921494476" />
+    <state width="1293" height="294" key="GridCell.Tab.0.left/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985191284" />
     <state width="1293" height="295" key="GridCell.Tab.0.left/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606827372685" />
-    <state width="1293" height="294" key="GridCell.Tab.0.right" timestamp="1606921494476">
+    <state width="1293" height="294" key="GridCell.Tab.0.right" timestamp="1606985191284">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state width="1293" height="294" key="GridCell.Tab.0.right/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921494476" />
+    <state width="1293" height="294" key="GridCell.Tab.0.right/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985191284" />
     <state width="1293" height="295" key="GridCell.Tab.0.right/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606827372685" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1606754371401">
       <screen x="1920" y="-135" width="1920" height="1080" />
@@ -218,25 +202,29 @@
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606743814996" />
     <state width="498" height="446" key="SwitcherDM/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606828235491" />
-    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606744603472">
+    <state x="2676" y="231" width="408" height="348" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1606985049471">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606744603472" />
+    <state x="2676" y="231" width="408" height="348" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985049471" />
+    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1606929520137">
+      <screen x="1920" y="-135" width="1920" height="1080" />
+    </state>
+    <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606929520137" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606921077734">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921077734" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606820342865" />
-    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606918856544">
+    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606981900094">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606918856544" />
+    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606981900094" />
     <state x="465" y="258" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598595748313" />
     <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606810370754" />
-    <state x="214" y="79" width="1162" height="990" maximized="true" key="dock-window-1" timestamp="1606924300807">
+    <state x="264" y="0" width="966" height="948" maximized="true" key="dock-window-1" timestamp="1606985306300">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="214" y="79" width="1162" height="990" maximized="true" key="dock-window-1/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606924300807" />
+    <state x="264" y="0" width="966" height="948" maximized="true" key="dock-window-1/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606985306300" />
     <state x="1952" y="114" width="1394" height="948" maximized="true" key="dock-window-1/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606824071848" />
     <state x="2499" y="70" width="764" height="670" key="find.popup" timestamp="1606921387617">
       <screen x="1920" y="-135" width="1920" height="1080" />
@@ -267,7 +255,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/profil/profil_sc.php</url>
-          <line>45</line>
+          <line>47</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

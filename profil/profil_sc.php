@@ -23,14 +23,16 @@ class profil_sc extends model
                                                  WHERE l.id_utilisateurs = :id  ",'','',['id'=>$id]);*/
     }
 
-    public function afficheIngredientRecettes($id)
+    public function afficheIngredient($id)
     {
-        return $this->db->selectTouteDonne("select i.nom ingredient,c.quantite,m.nom mesure ,r.titre nomRecette,r.id idRecette from  listes l
+        return $this->db->selectTouteDonne("select i.nom ingredient,sum(c.quantite) quantite,m.nom mesure ,r.titre nomRecette,r.id idRecette from  listes l
                                               INNER JOIN recettes r ON l.id_recettes =r.id
                                               INNER JOIN compositions c on r.id = c.id_recettes
                                               INNER JOIN ingredients i on c.id_ingredients = i.id
                                               INNER JOIN mesures m on c.id_mesures = m.id
-                                              WHERE l.id_utilisateurs = :id  ",'','',['id'=>$id]);
+                                              WHERE l.id_utilisateurs = :id 
+                                              Group BY  i.nom",'','',['id'=>$id]);
+
 
     }
 
