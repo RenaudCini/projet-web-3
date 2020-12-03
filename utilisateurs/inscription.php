@@ -74,51 +74,50 @@ if (isset($_POST['validation_user'])) {
         // Si les deux mots de passe renseignés sont bien identiques :
         if ($_POST['mot_de_passe'] == $_POST['mot_de_passe_confirm']) {
             // Si les infos du formulaire rentrent bien dans les limites fixées :
-
-            // if (
-            //     preg_match('#^[\w\.-]{1,25}$#', $_POST['pseudo']) && // Pseudo : (lettres.-_) 1 à 25
-            //     preg_match('#^[\w\.-]{1,60}@[\w\.-]{2,60}\.[a-z]{2,4}$#', $_POST['email']) && // Email : (lettres.-_)[1 à 60] @ (lettres.-_) [2 à 60] . (lettres) 2 à 4
-            //     preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,25}$/', $_POST['mot_de_passe']) // MDP : 1min, 1maj, 1chiffres, 1 carac spé (#?!@$%^&*-) min, 8 a 25
-            // ) {
-            $checkPseudo = checkPseudo($_POST['pseudo']);
-            $checkEmail = checkEmail($_POST['email']);
-            if ($checkPseudo == 0 && $checkEmail == 0) {
-                insertUtilisateur($_POST['pseudo'], $_POST['email'], $_POST['mot_de_passe']);
-            } else {
+            if (
+                preg_match('#^[\w\.-]{1,25}$#', $_POST['pseudo']) && // Pseudo : (lettres.-_) 1 à 25
+                preg_match('#^[\w\.-]{1,60}@[\w\.-]{2,60}\.[a-z]{2,4}$#', $_POST['email']) && // Email : (lettres.-_)[1 à 60] @ (lettres.-_) [2 à 60] . (lettres) 2 à 4
+                preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,25}$/', $_POST['mot_de_passe']) // MDP : 1min, 1maj, 1chiffres, 1 carac spé (#?!@$%^&*-) min, 8 a 25
+            ) {
+                $checkPseudo = checkPseudo($_POST['pseudo']);
+                $checkEmail = checkEmail($_POST['email']);
+                if ($checkPseudo == 0 && $checkEmail == 0) {
+                    insertUtilisateur($_POST['pseudo'], $_POST['email'], $_POST['mot_de_passe']);
+                } else {
+                    $return = array(
+                        'type_alert' => 'danger',
+                        'message' => 'Votre inscription n\'a pas pu être effectuée, pour les motifs suivants : <ul>'
+                    );
+                    if ($checkPseudo > 0) {
+                        $return['message'] .= '<li>Le pseudo est déjà pris.</li>';
+                    }
+                    if ($checkEmail > 0) {
+                        $return['message'] .= '<li>L\'adresse email est déjà utilisée avec un autre compte.</li>';
+                    }
+                    $return['message'] .= '</ul>';
+                    echo json_encode($return);
+                }
+            }
+            // Sinon, si les infos du formulaire ne rentrent pas dans les limites fixées :
+            else {
                 $return = array(
                     'type_alert' => 'danger',
                     'message' => 'Votre inscription n\'a pas pu être effectuée, pour les motifs suivants : <ul>'
                 );
-                if ($checkPseudo > 0) {
-                    $return['message'] .= '<li>Le pseudo est déjà pris.</li>';
+                if (!preg_match('#^[\w\.-]{1,25}$#', $_POST['pseudo'])) {
+                    $return['message'] .= '<li>Votre <b>pseudo</b> doit être compris entre 1 et 25 caractères et ne contenir que des chiffres, lettres, 
+                    ou caractères spéciaux suivants : <br/><b>. - _</b></li>';
                 }
-                if ($checkEmail > 0) {
-                    $return['message'] .= '<li>L\'adresse email est déjà utilisée avec un autre compte.</li>';
+                if (!preg_match('#^[\w\.-]{1,60}@[\w\.-]{2,60}\.[a-z]{2,4}$#', $_POST['email'])) {
+                    $return['message'] .= '<li>Votre <b>email</b> n\'est pas au bon format.</li>';
+                }
+                if (!preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-_.]).{8,25}$/', $_POST['mot_de_passe'])) {
+                    $return['message'] .= '<li>Votre <b>mot de passe</b> doit être compris entre 8 et 25 caractères et comprendre au moins 1 majuscule, 1 minuscule,
+                    1 chiffre et 1 caractère spécial parmi les suivants : <br/><b># ? ! @ $ % ^ & * . - _</b></li>';
                 }
                 $return['message'] .= '</ul>';
                 echo json_encode($return);
             }
-            // }
-            // // Sinon, si les infos du formulaire ne rentrent pas dans les limites fixées :
-            // else {
-            //     $return = array(
-            //         'type_alert' => 'danger',
-            //         'message' => 'Votre inscription n\'a pas pu être effectuée, pour les motifs suivants : <ul>'
-            //     );
-            //     if (!preg_match('#^[\w\.-]{1,25}$#', $_POST['pseudo'])) {
-            //         $return['message'] .= '<li>Votre <b>pseudo</b> doit être compris entre 1 et 25 caractères et ne contenir que des chiffres, lettres, 
-            //         ou caractères spéciaux suivants : <br/><b>. - _</b></li>';
-            //     }
-            //     if (!preg_match('#^[\w\.-]{1,60}@[\w\.-]{2,60}\.[a-z]{2,4}$#', $_POST['email'])) {
-            //         $return['message'] .= '<li>Votre <b>email</b> n\'est pas au bon format.</li>';
-            //     }
-            //     if (!preg_match('/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-_.]).{8,25}$/', $_POST['mot_de_passe'])) {
-            //         $return['message'] .= '<li>Votre <b>mot de passe</b> doit être compris entre 8 et 25 caractères et comprendre au moins 1 majuscule, 1 minuscule,
-            //         1 chiffre et 1 caractère spécial parmi les suivants : <br/><b># ? ! @ $ % ^ & * . - _</b></li>';
-            //     }
-            //     $return['message'] .= '</ul>';
-            //     echo json_encode($return);
-            // }
         }
         // Sinon, si les deux mots de passe ne sont pas identiques :
         else {
