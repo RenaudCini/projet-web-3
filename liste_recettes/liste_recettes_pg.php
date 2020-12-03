@@ -33,15 +33,24 @@ $compteur = 0;
         <div class="card">
             <div class="card-body text-center">
                 <h5 class="card-title"><?= $recette['titre'] ?></h5>
-                <p class="card-text">
-                    Difficulté : <?= $recette['difficulte'] ?><br>
-                    Budget : <?= $recette['budget'] ?><br>
-                    Temps : <?= $recette['temps'] ?><br>
-                </p>
-                <p class="text-right small text-secondary"> Ecrit par
+                <div class="row">
+                    <div class="col-md-6 text-right">Difficulté :</div>
+                    <div class="col-md-6 text-left"><?= creerIcones($recette['difficulte'], 'circle') ?></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-right">Budget :</div>
+                    <div class="col-md-6 text-left"><?= creerIcones($recette['budget'], 'circle') ?></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-right">Temps :</div>
+                    <div class="col-md-6 text-left"><b><?= $recette['temps'] ?> min.</b></div>
+                </div>
+                <br>
+                <p class="small text-secondary"> Ecrit par
                     <?= $recette['pseudo'] ?> le
                     <?= $recette['date'] ?>
                 </p>
+                <a class="btn btn-outline-dark" target="_blank" href="/fiche_recette/fiche_recette_pg.php?id=<?= $recette['id'] ?>">Voir la recette</a>
             </div>
         </div>
     </div>
