@@ -34,12 +34,12 @@ $compteur = 0;
             <div class="card-body text-center">
                 <h5 class="card-title"><?= $recette['titre'] ?></h5>
                 <div class="row">
-                    <div class="col-md-6 text-right">Difficulté :</div>
-                    <div class="col-md-6 text-left"><?= creerIcones($recette['difficulte'], 'circle') ?></div>
-                </div>
-                <div class="row">
                     <div class="col-md-6 text-right">Budget :</div>
                     <div class="col-md-6 text-left"><?= creerIcones($recette['budget'], 'circle') ?></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 text-right">Difficulté :</div>
+                    <div class="col-md-6 text-left"><?= creerIcones($recette['difficulte'], 'circle') ?></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-right">Temps :</div>
