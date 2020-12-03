@@ -121,16 +121,16 @@ $(document).ready(function () {
     });
 
     // Déconnexion
-    $('.btn_logout').on('click', function () {
+    $('#btnLogout').on('click', function () {
         $.ajax({
-            url: root_path + "_functions/_connexion.php",
+            url: "/utilisateurs/connexion.php",
             type: 'post',
             async: false,
             data: {
                 logout_user: true
             },
             success: function (data) {
-                window.location.replace(root_path + "accueil.php");
+                window.location.replace("/index.php");
             },
             error: function () {
                 location.reload();

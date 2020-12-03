@@ -20,7 +20,7 @@ $mesRecettes = $model->afficherMesRecettes($_SESSION['id']);
             <h1><?= $_SESSION['pseudo'] ?></h1>
         </div>
         <div class="col-2 text-right">
-            <button class="btn btn-outline-dark"><i class="fas fa-sign-out-alt pr-2"></i>Se déconnecter</button>
+            <button id="btnLogout" class="btn btn-outline-dark"><i class="fas fa-sign-out-alt pr-2"></i>Se déconnecter</button>
         </div>
     </div>
 
