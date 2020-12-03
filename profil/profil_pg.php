@@ -1,59 +1,136 @@
 <?php
 require_once('profil_sc.php');
 
-$profil = new profil_sc();
+$model = new profil_sc();
 $titrePage = 'Profil';
 $js[] = 'profil.js';
 
-$ingredients = $profil->afficheIngredient(8);
-$utilisateur = $profil->afficherUnUtilisateur(8);
-$favoris = $profil->afficherRecettesFavorites(8);
 require_once '../template/view/nav.php';
+
+
+$ingredients = $model->afficheIngredient($_SESSION['id']);
+$favoris = $model->afficherRecettesFavorites($_SESSION['id']);
+$mesRecettes = $model->afficherMesRecettes($_SESSION['id']);
 ?>
 
-    <div class="container-fluid">
-        <div class="row">
-
-            <!--pseudo & btn deconnexion -->
-            <div class="col-12">
-                <div class="d-flex justify-content-between row 3">
-                    <h2 class="ml-6"><?php echo $utilisateur['pseudo'] ?> .</h2>
-                    <button type="button" class="btn btn-light mr-5">Se déconnecter</button>
-                </div>
-                <HR class="col-11">
-                <div class="col-1"></div>
-            </div>
-            <div class="col-1"></div>
-            <!--liste de courses s -->
-            <div class="col-4 cadre mr-2 p-2">
-                <h2>Ma liste de courses</h2>
-                <table id="example" class="display" style="width:100%">
-                    <thead>
-                    <tr>
-                        <th>ingredient</th>
-                        <th>quantite</th>
-                        <th>Mesure</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ($ingredients as $ingredient) { ?>
-                        <tr>
-                            <td> <?php echo($ingredient['ingredient']) ?></td>
-                            <td> <?php echo($ingredient['quantite']) ?></td>
-                            <td> <?php echo($ingredient['mesure']) ?></td>
-                        </tr>
-                        <?php
-                    } ?>
-                    </tbody>
-                </table>
-            </div>
-            <!--favoris -->
-            <div class="col-6 mr-2  p-2 cadre">
-
-            </div>
-            <div class="1"></div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <h1><?= $_SESSION['pseudo'] ?></h1>
+        </div>
+        <div class="col-2 text-right">
+            <button class="btn btn-outline-dark"><i class="fas fa-sign-out-alt pr-2"></i>Se déconnecter</button>
         </div>
     </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-5">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-4">Ma liste de courses</h4>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <table class="table table-sm table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Ingrédient</th>
+                                        <th>Quantité</th>
+                                        <th>Mesure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($ingredients as $ingredient) { ?>
+                                        <tr>
+                                            <td> <?php echo ($ingredient['ingredient']) ?></td>
+                                            <td> <?php echo ($ingredient['quantite']) ?></td>
+                                            <td> <?php echo ($ingredient['mesure']) ?></td>
+                                        </tr>
+                                    <?php
+                                    } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-outline-dark btn-block"><i class="far fa-envelope pr-2"></i>Envoyer par mail</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline-dark btn-block"><i class="fas fa-download pr-2"></i>Exporter en PDF</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-4">Mes recettes favorites</h4>
+                    <?php foreach ($favoris as $favori) : ?>
+                        <a class="btn btn-outline-dark btn-block text-left" target="_blank" href="/fiche_recette/fiche_recette_pg?id=<?= $favori['id'] ?>">
+                            <?= $favori['titre'] ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row my-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-4">Mes recettes</h4>
+
+
+                    <div class="row">
+                        <?php
+                        $compteur = 0;
+                        foreach ($mesRecettes as $recette) :
+                            if ($compteur % 3 === 0) : ?>
+                    </div>
+                    <div class="row">
+                    <?php endif; ?>
+                    <div class="col-md-4 pb-3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><?= $recette['titre'] ?></h5>
+                                <div class="row">
+                                    <div class="col-md-6 text-right">Budget :</div>
+                                    <div class="col-md-6 text-left"><?= creerIcones($recette['budget'], 'circle') ?></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 text-right">Difficulté :</div>
+                                    <div class="col-md-6 text-left"><?= creerIcones($recette['difficulte'], 'circle') ?></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 text-right">Temps :</div>
+                                    <div class="col-md-6 text-left"><b><?= $recette['temps'] ?> min.</b></div>
+                                </div>
+                                <br>
+                                <a class="btn btn-outline-dark" target="_blank" href="/fiche_recette/fiche_recette_pg.php?id=<?= $recette['id'] ?>">Voir la recette</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                            $compteur++;
+                        endforeach;
+                ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
 <?php
 require_once '../template/view/footer.php';
