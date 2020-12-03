@@ -6,21 +6,35 @@ $js[] = 'liste_recettes.js';
 require_once '../template/view/nav.php';
 require_once 'liste_recettes_sc.php';
 
-$recettes = new liste_recettes_sc;
-$recettes = $recettes->listeRecettes('');
+$model = new liste_recettes_sc;
+
+if (isset($_GET['recette'])) {
+    $recettes = $model->listeRecettesGet($_GET['recette']);
+} else {
+    $recettes = $model->listeRecettes('');
+}
+
 $compteur = 0;
 ?>
 
 <div class="container">
 
-    <div class="form-group row justify-content-center">
-        <input type="text" class="form-control col-6 text-center" id="recherche" placeholder="Tapez votre recette ici">
-    </div>
-    <div class="row justify-content-center">
-        <button class="btn btn-primary" id="buttonSearch">Rechercher</button>
-    </div>
+    <form method="get" action="liste_recettes_pg.php">
+        <div class="form-group row justify-content-center">
+            <input type="text" class="form-control col-6 text-center" id="recette" name="recette" placeholder="Tapez votre recette ici">
+        </div>
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-primary" id="buttonSearch">Rechercher</button>
+        </div>
+    </form>
 
     <br>
+
+    <?php if (isset($_GET['recette'])) : ?>
+        <div class="alert alert-info text-center">Voici les résultats pour votre recherche : <b><?= $_GET['recette'] ?></b></div>
+
+    <?php endif; ?>
+
 
     <div class="row">
         <?php
