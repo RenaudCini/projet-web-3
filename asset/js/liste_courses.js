@@ -59,6 +59,7 @@ $(document).ready(function () {
                         'Aucun article n\'a été ajouté à votre liste de courses.<br>' +
                         'Rendez-vous sur une fiche recette et cliquez sur "<b>Ajouter à ma liste de courses</b>" pour ajouter des ingrédients.' +
                         '</div></div>');
+                    $('#supprListe').remove();
                 }
             }
         })

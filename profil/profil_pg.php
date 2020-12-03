@@ -33,9 +33,11 @@ $mesRecettes = $model->afficherMesRecettes($_SESSION['id']);
                     <h4 class="mb-4 row">
                         <div class="col">Ma liste de courses</div>
                         <div class="col text-right">
-                            <button id="supprListe" class="btn btn-outline-danger" data-idUtilisateur="<?= $_SESSION['id'] ?>">
-                                <i class="fas fa-times pr-2"></i>Supprimer la liste
-                            </button>
+                            <?php if ($ingredients) : ?>
+                                <button id="supprListe" class="btn btn-outline-danger" data-idUtilisateur="<?= $_SESSION['id'] ?>">
+                                    <i class="fas fa-times pr-2"></i>Supprimer la liste
+                                </button>
+                            <?php endif; ?>
                         </div>
                     </h4>
 
