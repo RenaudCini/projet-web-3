@@ -17,7 +17,8 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     <link rel="stylesheet" href="/asset/css/styles.css">
 
     <?php
-    $role = $_SESSION['id_roles'];
+    $role =  isset($_SESSION['id_roles']) ?$_SESSION['id_roles'] :null  ;
+
     if (isset($css)) {
         foreach ($css as $style) {
             echo "<link rel='stylesheet' href='/asset/css/$style'>";
