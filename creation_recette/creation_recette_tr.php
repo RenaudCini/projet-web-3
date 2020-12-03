@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once 'creation_recette_sc.php';
 
@@ -19,7 +20,7 @@ if ($_POST['creationRecette'] && $_POST['reponsesFormulaire']) {
             'budget' => $reponses['budget'],
             'temps' => $reponses['temps'],
             'image' => $reponses['image'],
-            'id_utilisateurs' => '2'
+            'id_utilisateurs' => $_SESSION['id']
         ]
     );
 
