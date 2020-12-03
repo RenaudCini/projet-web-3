@@ -1,15 +1,15 @@
 <?php
-require('../../asset/lib/fpdf.php');
+require_once dirname(dirname(__DIR__)) . '/asset/lib/fpdf.php';
 
 class PDF extends FPDF
 {
 
-    public function __construct( $orientation = 'P', $unit = 'mm', $size = 'A4')
+    public function __construct($orientation = 'P', $unit = 'mm', $size = 'A4')
     {
         parent::__construct($orientation, $unit, $size);
     }
 
-// Tableau coloré
+    // Tableau coloré
     public function FancyTable($header, $data)
     {
         // Couleurs, épaisseur du trait et police grasse
@@ -19,7 +19,7 @@ class PDF extends FPDF
         $this->SetLineWidth(.3);
         $this->SetFont('', 'B');
         // En-tête
-        $w = array(40, 35, 45, 40);
+        $w = array(40, 35, 45);
         for ($i = 0, $iMax = count($header); $i < $iMax; $i++)
             $this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', true);
         $this->Ln();
@@ -41,13 +41,12 @@ class PDF extends FPDF
     }
 }
 
-$data = [0=>[0=>'marseille',1=>25,2=>'lyon']];
-$pdf = new PDF();
-// Titres des colonnes
-$header = array('Ingredient', 'Quantité','Mesure');
-// Chargement des données
-$pdf->SetFont('Arial','',14);
-$pdf->AddPage();
-$pdf->FancyTable($header,$data);
-$pdf->Output();
-
+// $data = [0=>[0=>'marseille',1=>25,2=>'lyon']];
+// $pdf = new PDF();
+// // Titres des colonnes
+// $header = array('Ingredient', 'Quantité','Mesure');
+// // Chargement des données
+// $pdf->SetFont('Arial','',14);
+// $pdf->AddPage();
+// $pdf->FancyTable($header,$data);
+// $pdf->Output();
