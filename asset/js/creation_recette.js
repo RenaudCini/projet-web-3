@@ -36,12 +36,13 @@ $(document).ready(function () {
     // Envoi du formulaire :
     $('.btnEnvoiFormulaire').click(function () {
 
+        let erreur = false;
+
         let titre = $('#titre').val();
         let budget = $('.budgetCercles .fas').length;
         let difficulte = $('.difficulteCercles .fas').length;
         let temps = $('#temps').val();
         let image = $('#image').val();
-
 
         let reponsesFormulaire = {
             titre,
@@ -88,7 +89,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 data = $.parseJSON(data);
-                $('.retourAjax').html("<div class='alert alert-success'>" + data + "</div>")
+                $('.retourAjax').html("<div class='alert alert-info'>" + data + "</div>")
             }
         })
 

@@ -130,7 +130,7 @@ if (isset($_SESSION['id'])) :
                         <div class="form-group row">
                             <label for="temps" class="text-right col-sm-5 col-form-label"><b>Temps :</b></label>
                             <div class="col-sm-2">
-                                <input type="text" class="form-control" id="temps">
+                                <input type="number" class="form-control" id="temps">
                             </div>
                             <div class="col-form-label col-sm-2 text-left">
                                 minutes

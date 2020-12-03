@@ -3,6 +3,7 @@
 require_once 'fiche_recette_sc.php';
 
 $titrePage = 'Fiche recette';
+$js[] = 'fiche_recette.js';
 $js[] = 'commentaire.js';
 
 require_once '../template/view/nav.php';
@@ -69,11 +70,12 @@ if (filter_input(INPUT_GET, 'id')) {
             <br>
 
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Ingrédients</h5>
                             <br>
+
                             <ul>
                                 <?php
                                 foreach ($ingredients as $ingredient) {
@@ -82,10 +84,30 @@ if (filter_input(INPUT_GET, 'id')) {
                                 ?>
                             </ul>
 
+                            <?php if (isset($_SESSION['id'])) : ?>
+                                <button id="btnAjoutListeCourses" class="btn btn-outline-dark btn-block my-4" data-idRecette="<?= $recette['id'] ?>" data-idUtilisateur="<?= $_SESSION['id'] ?>">
+                                    <i class="fas fa-shopping-cart pr-2"></i>Ajouter à la liste de courses
+                                </button>
+                            <?php else : ?>
+
+                                <!-- Sinon, s'il n'est pas connecté : -->
+                                <div class="card text-center my-4">
+                                    <div class="card-body">
+                                        <a href="#" data-toggle="modal" data-target="#modal_connexion">Connectez-vous</a> ou <a href="#" data-toggle="modal" data-target="#modal_inscription">inscrivez-vous</a> pour
+                                        ajouter ces ingrédients à votre liste de courses.
+                                    </div>
+                                </div>
+
+                            <?php endif; ?>
+
+                            <button class="btn btn-outline-dark btn-block"><i class="far fa-envelope pr-2"></i>Envoyer par mail</button>
+                            <button class="btn btn-outline-dark btn-block"><i class="fas fa-download pr-2"></i>Exporter en PDF</button>
+
+
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="text-center mb-4">Etapes de préparation</h5>
