@@ -1,8 +1,10 @@
 <footer>
     <script src="/asset/lib/jquery/jquery.min.js"></script>
+    <script src="/asset/lib/DataTables-1.10.22/js/jquery.dataTables.js"></script>
     <script src="/asset/lib/popper/popper.min.js"></script>
     <script src="/asset/lib/bootstrap/bootstrap.min.js"></script>
     <script src="/asset/js/main.js"></script>
+
     <?php
     if (isset($js)) {
         foreach ($js as $script) {

@@ -25,6 +25,13 @@ class BDD
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function updateDonne($sql, $array)
+    {
+        $req = $this->db->prepare($sql);
+        $req->execute($array);
+    }
+
+
     /**
      * Permet de récupérer plusieurs enregistrements dans la base de données.
      *
@@ -33,7 +40,7 @@ class BDD
      * @param string $limit
      * @return array|false
      */
-    public function selectTouteDonne(string $sql, string $limit, string $orderby, array $params = []):array
+    public function selectTouteDonne(string $sql, string $limit, string $orderby, array $params = []): array
     {
 
         $sql .= ' ' . $orderby . ' ' . $limit;
