@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="profil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_pg.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_pg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_sc.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_sc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin_tr.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin_tr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/view/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/view/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,13 +49,6 @@
         <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="roles: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="utilisateurs: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -102,7 +90,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@672d5481" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -131,7 +129,7 @@
       <workItem from="1606818499399" duration="5077000" />
       <workItem from="1606918857067" duration="9488000" />
       <workItem from="1606981896707" duration="7700000" />
-      <workItem from="1606995371596" duration="10557000" />
+      <workItem from="1606995371596" duration="11956000" />
     </task>
     <servers />
   </component>

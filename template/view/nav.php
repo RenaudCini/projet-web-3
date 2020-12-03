@@ -17,6 +17,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     <link rel="stylesheet" href="/asset/css/styles.css">
 
     <?php
+    $role = $_SESSION['id_roles'];
     if (isset($css)) {
         foreach ($css as $style) {
             echo "<link rel='stylesheet' href='/asset/css/$style'>";
@@ -41,6 +42,11 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
                 <li class="nav-item">
                     <a class="nav-link" href="/creation_recette/creation_recette_pg.php">Créer votre recette</a>
                 </li>
+                <?php if($role === '1'){ ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin/admin_pg.php">Administration</a>
+                </li>
+                <?php } ?>
             </ul>
 
             <?php if (isset($_SESSION['id'], $_SESSION['pseudo'])) : ?>
