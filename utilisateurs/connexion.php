@@ -15,7 +15,7 @@ function connectUtilisateur($pseudo, $mot_de_passe)
 
     $bdd = new BDD;
 
-    $result = $bdd->selectUneDonne('SELECT id, pseudo, mdp, id_roles FROM utilisateurs WHERE pseudo = :pseudo', ['pseudo' => $pseudo]);
+    $result = $bdd->selectUneDonne('SELECT id, pseudo, mdp, id_roles FROM utilisateurs WHERE pseudo = :pseudo AND actif = 1', ['pseudo' => $pseudo]);
 
     if (!$result) {
         $return = array(
