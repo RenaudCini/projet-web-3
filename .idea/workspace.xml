@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="136fea87-042b-441b-9c62-27766beaf6ef" name="Default Changelist" comment="profil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/view/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/view/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fpdf/PDF.php" beforeDir="false" afterPath="$PROJECT_DIR$/template/fpdf/PDF.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,30 +26,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="lesrecettesdudeveloppeur@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lesrecettesdudeveloppeur: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="roles: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="Git.Settings">
@@ -90,17 +67,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:lesrecettesdudeveloppeur@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@672d5481" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -130,6 +97,7 @@
       <workItem from="1606918857067" duration="9488000" />
       <workItem from="1606981896707" duration="7700000" />
       <workItem from="1606995371596" duration="11956000" />
+      <workItem from="1607077273962" duration="704000" />
     </task>
     <servers />
   </component>
@@ -220,10 +188,10 @@
     </state>
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606921077734" />
     <state x="2012" y="-43" width="1736" height="896" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606820342865" />
-    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1606995372268">
+    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607077286608">
       <screen x="1920" y="-135" width="1920" height="1080" />
     </state>
-    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1606995372268" />
+    <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.-135.1920.1080@1920.-135.1920.1080" timestamp="1607077286608" />
     <state x="465" y="258" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1598595748313" />
     <state x="2501" y="188" key="com.intellij.ide.util.TipDialog/1920.-135.1920.1080/0.0.1536.864@1920.-135.1920.1080" timestamp="1606810370754" />
     <state x="2107" y="132" width="966" height="948" maximized="true" key="dock-window-1" timestamp="1607000170293">
