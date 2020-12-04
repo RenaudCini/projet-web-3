@@ -55,7 +55,7 @@ if (isset($_POST['listeCourses'], $_POST['idUtilisateur'])) {
     $dataListe = recupererListeCourses($idUtilisateur);
 
     foreach ($dataListe as $index => $line) {
-        $data[$index] = array_values($line);
+        $data[$index] = array_values(array_map('utf8_decode', $line));
     }
 
     $pdf = new PDF();
