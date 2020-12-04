@@ -8,8 +8,6 @@ if ($_POST['creationRecette'] && $_POST['reponsesFormulaire']) {
     $bdd = new BDD;
 
     $reponses = $_POST['reponsesFormulaire'];
-    var_dump($reponses);
-    die;
 
     $titre = $reponses['titre'];
     $difficulte = intval($reponses['difficulte']);

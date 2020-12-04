@@ -60,6 +60,7 @@ $(document).ready(function () {
                         'Rendez-vous sur une fiche recette et cliquez sur "<b>Ajouter à ma liste de courses</b>" pour ajouter des ingrédients.' +
                         '</div></div>');
                     $('#supprListe').remove();
+                    $('#boutonsExport').remove();
                 }
             }
         })
