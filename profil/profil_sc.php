@@ -46,7 +46,7 @@ class profil_sc extends model
         return $this->db->selectTouteDonne(
             "select r.*  from favoris f
             INNER JOIN recettes r on f.id_recettes = r.id         
-            WHERE f.id_utilisateurs = :id",
+            WHERE f.id_utilisateurs = :id AND f.bool = 1",
             '',
             '',
             ['id' => $id]

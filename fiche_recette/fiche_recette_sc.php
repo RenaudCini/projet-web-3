@@ -67,3 +67,15 @@ function checkSiUtilisateurAListe($idRecette, $idUtilisateur)
         ]
     );
 }
+
+function favoriUtilisateur($idRecette, $idUtilisateur)
+{
+    $bdd = new BDD;
+    return $bdd->selectUneDonne(
+        "SELECT * FROM favoris WHERE id_recettes = :id_recettes AND id_utilisateurs = :id_utilisateurs AND bool = 1",
+        [
+            'id_recettes' => $idRecette,
+            'id_utilisateurs' => $idUtilisateur
+        ]
+    );
+}

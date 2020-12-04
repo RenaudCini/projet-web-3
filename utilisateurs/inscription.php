@@ -38,8 +38,8 @@ function insertUtilisateur($pseudo, $email, $mot_de_passe)
     $bdd = new BDD;
     $query = $bdd->insertDonne(
         'utilisateurs',
-        'pseudo, mail, mdp, date_inscription, id_roles',
-        ':pseudo, :mail, :mdp, NOW(), :id_roles',
+        'pseudo, mail, mdp, date_inscription, id_roles, actif',
+        ':pseudo, :mail, :mdp, NOW(), :id_roles, 1',
         [
             'pseudo' => htmlspecialchars($pseudo),
             'mail' => htmlspecialchars($email),
