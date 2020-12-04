@@ -122,9 +122,12 @@ if (filter_input(INPUT_GET, 'id')) {
 
                             <?php endif; ?>
 
-                            <button class="btn btn-outline-dark btn-block"><i class="far fa-envelope pr-2"></i>Envoyer par mail</button>
-                            <button class="btn btn-outline-dark btn-block"><i class="fas fa-download pr-2"></i>Exporter en PDF</button>
+                            <form action="/utilisateurs/export_PDF.php" method="post" target="_blank">
+                                <input type="hidden" name="recette" value="1">
+                                <input type="hidden" name="idRecette" value="<?= $recette['id'] ?>">
 
+                                <button type="submit" id="btnExportRecettePDF" class="btn btn-outline-dark btn-block"><i class="fas fa-download pr-2"></i>Exporter en PDF</button>
+                            </form>
 
                         </div>
                     </div>

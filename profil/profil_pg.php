@@ -76,10 +76,7 @@ $mesRecettes = $model->afficherMesRecettes($_SESSION['id']);
                     </div>
                     <?php if ($ingredients) : ?>
                         <div id="boutonsExport" class="row">
-                            <div class="col-6">
-                                <button class="btn btn-outline-dark btn-block"><i class="far fa-envelope pr-2"></i>Envoyer par mail</button>
-                            </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <form action="/utilisateurs/export_PDF.php" method="post" target="_blank">
                                     <input type="hidden" name="listeCourses" value="1">
                                     <input type="hidden" name="idUtilisateur" value="<?= $_SESSION['id'] ?>">

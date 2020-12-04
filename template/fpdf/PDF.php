@@ -74,18 +74,6 @@ class PDF extends FPDF
         $this->Cell(0, 10, 'Page ' . $this->PageNo(), 0, 0, 'C');
     }
 
-    function TitreChapitre($num, $libelle)
-    {
-        // Arial 12
-        $this->SetFont('Arial', '', 12);
-        // Couleur de fond
-        $this->SetFillColor(200, 220, 255);
-        // Titre
-        $this->Cell(0, 6, "Chapitre $num : $libelle", 0, 1, 'L', true);
-        // Saut de ligne
-        $this->Ln(4);
-    }
-
     function CorpsChapitre($txt)
     {
         // Times 12
@@ -96,19 +84,13 @@ class PDF extends FPDF
         $this->Ln();
         // Mention en italique
         $this->SetFont('', 'I');
-        $this->Cell(0, 5, "(fin de l'extrait)");
     }
 
-    function AjouterChapitre($num, $titre, $fichier)
+    function EcrireContenu($contenu)
     {
         $this->AddPage();
-        $this->TitreChapitre($num, $titre);
-        $this->CorpsChapitre($fichier);
+        $this->CorpsChapitre($contenu);
     }
-
-
-
-
 }
 // pour lister reccete
 //$pdf = new PDF();
