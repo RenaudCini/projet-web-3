@@ -5,6 +5,7 @@ require_once 'fiche_recette_sc.php';
 $titrePage = 'Fiche recette';
 $js[] = 'liste_courses.js';
 $js[] = 'commentaire.js';
+$js[] = 'favori.js';
 
 require_once '../template/view/nav.php';
 
@@ -43,7 +44,7 @@ if (filter_input(INPUT_GET, 'id')) {
                     <div class="card">
                         <img src="https://picsum.photos/1000/200?random=10" class="card-img-top" alt="...">
                         <div class="card-body row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <h4 class="card-title"><?= $recette['titre'] ?></h4>
                             </div>
                             <div class="col text-center">
@@ -62,9 +63,20 @@ if (filter_input(INPUT_GET, 'id')) {
                                 <b>Note</b><br>
                                 <?php creerIcones($noteMoyenne, 'star'); ?>
                             </div>
+                            <?php if (isset($_SESSION['id'])) :
+                                $classBtnFavori = favoriUtilisateur($recette['id'], $_SESSION['id']) ? 'fas' : 'far'; ?>
+                                <div class="col text-center">
+                                    <b>Favori</b><br>
+                                    <i class="btnAjoutFavori <?= $classBtnFavori ?> fa-heart" data-idRecette="<?= $recette['id'] ?>" data-idUtilisateur="<?= $_SESSION['id'] ?>"></i>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div id="ajaxFavoris">
+                <!-- Contenu chargé en AJAX. -->
             </div>
 
             <br>
